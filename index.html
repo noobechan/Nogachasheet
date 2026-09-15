@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>무과금 편성 수록 랭킹</title>
+<style>
+:root{color-scheme:light dark;--bg:#f6f7f9;--card:#fff;--text:#16181d;--muted:#6d737d;--line:#e4e7ec;--accent:#276ef1;--soft:#edf3ff;--shadow:0 8px 30px rgba(0,0,0,.06)}
+@media(prefers-color-scheme:dark){:root{--bg:#101216;--card:#181b20;--text:#f2f4f7;--muted:#9aa1ab;--line:#2b3038;--accent:#77a7ff;--soft:#202c43;--shadow:none}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}.wrap{max-width:1050px;margin:auto;padding:34px 18px 60px}h1{font-size:clamp(25px,5vw,38px);margin:0 0 7px;letter-spacing:-.04em}.sub{color:var(--muted);font-size:14px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:22px 0 14px}.tabs{display:flex;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px}.tab,button{border:0;background:transparent;color:var(--muted);padding:9px 13px;border-radius:9px;font-weight:700;font-size:14px;cursor:pointer}.tab.active{background:var(--soft);color:var(--accent)}.refresh{margin-left:auto;background:var(--card);border:1px solid var(--line);color:var(--text)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0}.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:var(--shadow)}.stat b{font-size:22px;display:block;margin-top:4px}.stat span{font-size:12px;color:var(--muted)}.status{font-size:13px;color:var(--muted);margin:14px 2px}.error{display:none;background:#fff0f0;color:#b42318;border:1px solid #f5b8b8;padding:14px;border-radius:12px;line-height:1.55;margin:12px 0}.tablebox{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}table{width:100%;border-collapse:collapse}th,td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left;font-size:14px}th{font-size:12px;color:var(--muted);position:sticky;top:0;background:var(--card);z-index:1}.rank{width:72px;text-align:center;font-variant-numeric:tabular-nums}.count{text-align:right;font-weight:800;width:85px}.player{font-weight:700}.kr{font-size:11px;margin-left:6px;background:var(--soft);color:var(--accent);padding:2px 6px;border-radius:999px}.details{color:var(--muted);font-size:12px;margin-top:4px}.unknown{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;color:var(--muted)}.unknown b{color:var(--text)}.footer{margin-top:20px;color:var(--muted);font-size:12px;line-height:1.6}a{color:var(--accent)}
+@media(max-width:650px){.wrap{padding:24px 12px 45px}.stats{grid-template-columns:repeat(2,1fr)}th,td{padding:12px 9px}.rank{width:50px}.details{font-size:11px}.refresh{margin-left:0}.toolbar{justify-content:space-between}}
+</style></head>
+<body><main class="wrap">
+<h1>무과금 편성 수록 랭킹</h1>
+<div class="sub">無課金枠縛り Google Sheets 기준 · 플레이어명 표기 1칸 = 1건</div>
+<div class="toolbar"><div class="tabs"><button class="tab active" data-view="all">전체 랭킹</button><button class="tab" data-view="kr">한국인 랭킹</button></div><button class="refresh" id="refresh">↻ 새로고침</button></div>
+<div class="stats"><div class="stat"><span>순위 플레이어</span><b id="players">-</b></div><div class="stat"><span>전체 수록</span><b id="records">-</b></div><div class="stat"><span>한국인 수록</span><b id="krRecords">-</b></div><div class="stat"><span>불명</span><b id="unknown">-</b></div></div>
+<div class="status" id="status">최신 시트 데이터를 불러오는 중…</div><div class="error" id="error"></div>
+<div class="tablebox"><table><thead><tr><th class="rank">순위</th><th>플레이어</th><th class="count">수록</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="unknown">불명 기록은 순위에서 제외합니다. 현재 불명 총합: <b id="unknownBottom">-</b></div>
+<div class="footer">이 페이지는 Google Sheets 데이터를 브라우저에서 직접 읽어 순위를 계산합니다. 시트 수정 후 Google 측 데이터 반영에 약간의 지연이 생길 수 있습니다. 데이터가 갱신되지 않으면 ‘새로고침’을 눌러 주세요.</div>
+</main>
+<script>
+const SHEET_ID='12bhVk1tfC9N-U2eU9xie-XoW2gw85acQAukR-W2k3KY';
+const CATEGORIES={
+ '旧レ':'구레','真レ':'신레','零レ':'제로레','塔':'탑','降臨':'강림','強襲':'강습','超獣':'초수','開眼':'개안','コラボ':'콜라보','他':'기타'
+};
+const KOREANS=new Set(['퓨츄','싱싱한뉴비','black rabbit','ノノ','sour','푸하하','hmmm','윾띵','프츠','light','인사','포적']);
+// 사용자가 확정한 동일인/표기 통합 규칙. 필요하면 여기에 계속 추가 가능.
+const ALIASES=new Map([
+ ['brack rabbit','black rabbit'],
+ ['black rabbit','black rabbit'],
+ ['被神眷顾的小初','被神眷顧的小初']
+]);
+const DISPLAY=new Map([['black rabbit','Black Rabbit'],['sour','Sour (기플)'],['hmmm','Hmmm']]);
+let dataset=[], view='all';
+function normName(raw){
+ let s=String(raw??'').trim(); if(!s)return '';
+ // 영어 대소문자 통합. 한글/일본어/중국어에는 영향 없음.
+ let key=s.toLocaleLowerCase('en-US');
+ if(/^noname(?:\b|[\d._-])/i.test(s)||/^deleted\d*$/i.test(s)||s==='不明') return '__unknown__';
+ if(ALIASES.has(key)) key=ALIASES.get(key);
+ if(ALIASES.has(s)) key=ALIASES.get(s);
+ return key;
+}
+function displayName(key,raw){return DISPLAY.get(key)||raw}
+function parseCSV(text){let out=[],row=[],v='',q=false;for(let i=0;i<text.length;i++){let c=text[i];if(q){if(c==='"'&&text[i+1]==='"'){v+='"';i++}else if(c==='"')q=false;else v+=c}else{if(c==='"')q=true;else if(c===','){row.push(v);v=''}else if(c==='\n'){row.push(v.replace(/\r$/,''));out.push(row);row=[];v=''}else v+=c}}if(v||row.length){row.push(v);out.push(row)}return out}
+async function loadTab(tab){
+ const url=`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(tab)}&_=${Date.now()}`;
+ const r=await fetch(url,{cache:'no-store'}); if(!r.ok)throw new Error(`${tab}: HTTP ${r.status}`);
+ const rows=parseCSV(await r.text()); if(!rows.length)return [];
+ const headers=rows[0].map(x=>x.trim()); const playerCols=[];
+ headers.forEach((h,i)=>{if(h==='プレイヤー')playerCols.push(i)});
+ if(!playerCols.length)throw new Error(`${tab}: プレイヤー 열을 찾지 못했습니다.`);
+ let items=[]; for(let y=1;y<rows.length;y++)for(const x of playerCols){const raw=(rows[y][x]||'').trim();if(raw)items.push({raw,tab,row:y+1})}
+ return items;
+}
+async function load(){
+ const status=document.querySelector('#status'),err=document.querySelector('#error'); err.style.display='none'; status.textContent='최신 시트 데이터를 불러오는 중…';
+ try{
+  const chunks=await Promise.all(Object.keys(CATEGORIES).map(loadTab)); const all=chunks.flat();
+  const map=new Map(); let unknown=0;
+  for(const item of all){const key=normName(item.raw);if(!key)continue;if(key==='__unknown__'){unknown++;continue}
+   if(!map.has(key))map.set(key,{key,name:displayName(key,item.raw),count:0,cats:{},raws:new Set()});
+   const p=map.get(key);p.count++;p.cats[item.tab]=(p.cats[item.tab]||0)+1;p.raws.add(item.raw);
+  }
+  dataset=[...map.values()].sort((a,b)=>b.count-a.count||a.name.localeCompare(b.name));
+  window.__unknown=unknown; render();
+  status.textContent=`마지막 갱신: ${new Intl.DateTimeFormat('ko-KR',{dateStyle:'medium',timeStyle:'medium'}).format(new Date())}`;
+ }catch(e){console.error(e);err.style.display='block';err.innerHTML=`시트 데이터를 직접 읽지 못했습니다.<br><b>${String(e.message||e)}</b><br>현재 Google 공유 설정에서 브라우저 직접 접근이 차단된 경우 Apps Script 방식으로 전환해야 합니다.`;status.textContent='데이터 연결 실패';}
+}
+function isKorean(p){return KOREANS.has(p.key)||KOREANS.has(p.name)}
+function render(){
+ let list=view==='kr'?dataset.filter(isKorean):dataset; let prev=null,rank=0;
+ const tbody=document.querySelector('#rows');tbody.innerHTML='';
+ list.forEach((p,i)=>{if(p.count!==prev)rank=i+1;prev=p.count;const cat=Object.entries(p.cats).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`${CATEGORIES[k]} ${v}`).join(' · ');
+  const tr=document.createElement('tr');tr.innerHTML=`<td class="rank">${rank}</td><td><span class="player"></span>${isKorean(p)?'<span class="kr">KR</span>':''}<div class="details"></div></td><td class="count">${p.count}</td>`;tr.querySelector('.player').textContent=p.name;tr.querySelector('.details').textContent=cat;tbody.appendChild(tr)
+ });
+ const krTotal=dataset.filter(isKorean).reduce((s,p)=>s+p.count,0), allTotal=dataset.reduce((s,p)=>s+p.count,0)+(window.__unknown||0);
+ document.querySelector('#players').textContent=dataset.length.toLocaleString();document.querySelector('#records').textContent=allTotal.toLocaleString();document.querySelector('#krRecords').textContent=krTotal.toLocaleString();document.querySelector('#unknown').textContent=(window.__unknown||0).toLocaleString();document.querySelector('#unknownBottom').textContent=(window.__unknown||0).toLocaleString()+'건';
+}
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');view=b.dataset.view;render()});document.querySelector('#refresh').onclick=load;
+load(); setInterval(load,60000);
+</script></body></html>
