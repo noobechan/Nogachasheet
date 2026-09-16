@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>무과금 편성 수록 랭킹</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Zen+Maru+Gothic:wght@400;500&display=swap');
+:root{color-scheme:light dark;--font-kr:'Jua',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--font-jp:'Zen Maru Gothic','Hiragino Sans','Yu Gothic',sans-serif;--bg:#f4f6f8;--card:#fff;--line:#d8dde5;--text:#1b1f24;--muted:#657080;--accent:#3568d4;--accent-soft:#eaf0ff;--shadow:0 18px 50px rgba(20,28,45,.08);--surface:#fafbfc}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;text-size-adjust:100%}body{margin:0;min-height:100vh;background:radial-gradient(900px 420px at 50% -120px,rgba(53,104,212,.12),transparent 62%),linear-gradient(180deg,#f7f9fc 0%,var(--bg) 46%,#eef2f7 100%);background-attachment:fixed;color:var(--text);font-family:var(--font-kr);text-shadow:.08px 0 0 currentColor;font-variant-numeric:tabular-nums}
+.wrap{max-width:1180px;margin:0 auto;padding:32px 16px 48px}.title{padding-left:9px}.topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:16px}.title h1{font-size:clamp(20px,3vw,30px);line-height:1.25;letter-spacing:-.025em;margin:0 0 5px;font-weight:500}.sub{color:var(--muted);font-size:13px}.sub-jp{font-family:var(--font-jp)}.refresh{font-family:var(--font-kr);border:1px solid var(--line);background:#eef1f5;color:var(--text);border-radius:12px;padding:10px 13px;font-weight:500;cursor:pointer;box-shadow:0 6px 18px rgba(20,28,45,.06);transition:.16s ease}.refresh:hover{transform:translateY(-1px);border-color:#aeb7c4}
+.tablebox,.unknown{background:linear-gradient(180deg,#fff,#fbfcfe);border:1px solid #dce3ed;border-radius:18px;box-shadow:var(--shadow)}.status{font-size:12px;color:var(--muted);margin:0 2px 10px}.error{display:none;background:#fff0f0;color:#b42318;border:1px solid #f5b8b8;padding:13px 15px;border-radius:14px;line-height:1.55;margin:12px 0}.tablebox{overflow:hidden}.table-head{height:58px;padding:0 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,#fff,#fbfcff)}.table-head h2{margin:0;font-size:16px;letter-spacing:-.018em}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:11px 14px;border-bottom:1px solid #edf0f3;text-align:left;font-size:13px;white-space:nowrap}th{font-size:12px;color:#526074;background:#f5f8fc;position:sticky;top:0;z-index:2}tbody tr:hover td{background:rgba(53,104,212,.025)}tbody tr.rank-group-start:not(:first-child) td{border-top:3px solid #d7dee9;padding-top:14px}tbody tr.rank-tie td{border-bottom-color:#f3f5f8}tbody tr:last-child td{border-bottom:0}.rank{width:72px;text-align:center}.count{text-align:right;font-weight:500;width:85px}.player{font-weight:400}.kr-badge{display:inline-flex;align-items:center;margin-left:6px;padding:2px 6px;border-radius:999px;background:rgba(53,104,212,.10);border:1px solid rgba(53,104,212,.18);color:#3568d4;font-size:9.5px;line-height:1.25;font-weight:500;vertical-align:1px;letter-spacing:.01em}.kr-row .rank{color:#3568d4}.medal{font-size:21px;line-height:1;display:inline-block;vertical-align:-2px}.search{width:min(280px,42vw);border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:11px;padding:9px 11px;font-family:var(--font-kr);font-size:13px;outline:none}.search:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(53,104,212,.11)}.details{color:var(--muted);font-size:11.5px;margin-top:4px}.unknown{margin-top:16px;padding:13px 15px;color:#555f6d;font-size:12px;line-height:1.6;position:relative;overflow:hidden}.unknown:before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,rgba(53,104,212,.70),rgba(53,104,212,.18))}.unknown b{color:var(--text)}.footer{text-align:center;color:#7b8491;font-size:12px;line-height:1.5;margin-top:18px}
+@media(prefers-color-scheme:dark){:root{--bg:#111418;--card:#1a1f25;--line:#343b45;--text:#f1f4f7;--muted:#a7b0bd;--accent:#79a6ff;--accent-soft:#1d2d4b;--shadow:0 18px 50px rgba(0,0,0,.28);--surface:#20262d}body{background:radial-gradient(900px 420px at 50% -120px,rgba(63,114,215,.18),transparent 62%),linear-gradient(180deg,#11161c 0%,var(--bg) 48%,#0e1217 100%)}.refresh{background:#303740;color:#cbd2db;border-color:#343b45}.tablebox,.unknown{background:linear-gradient(180deg,rgba(31,37,45,.96),rgba(24,29,35,.97));border-color:rgba(124,141,161,.18)}.table-head{background:linear-gradient(180deg,rgba(255,255,255,.025),transparent);border-color:var(--line)}th{background:#222830;color:#c6ced8}td{border-bottom-color:#2b323a}tbody tr:hover td{background:rgba(121,166,255,.025)}.unknown{color:#b6bfca}.error{background:#2b1d1d;color:#ff9a93;border-color:#6b4442}}
+.actions{display:flex;gap:8px;align-items:center}@media(prefers-color-scheme:dark){tbody tr.rank-group-start:not(:first-child) td{border-top-color:#3b4655}.search{background:#151a20;border-color:#343b45}.kr-row .rank{color:#79a6ff}.kr-badge{background:rgba(121,166,255,.12);border-color:rgba(121,166,255,.22);color:#9bbcff}}
+@media(max-width:700px){.wrap{padding:22px 10px 30px}.title{padding-left:5px}.topbar{flex-direction:column;gap:12px}.actions{width:100%}.search{width:100%;flex:1}.refresh{align-self:flex-start}.tablebox{border-radius:15px}.table-head{height:55px;padding:0 15px}th,td{padding:10px 9px}.rank{width:50px}.details{font-size:10.8px}}
+
+.player{cursor:pointer}.player:hover{color:var(--accent)}.info-btn{display:inline-grid;place-items:center;width:18px;height:18px;margin-right:7px;padding:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--muted);font-family:Arial,sans-serif;font-size:12px;font-weight:700;line-height:1;cursor:pointer;vertical-align:-2px}.info-btn:hover{color:var(--accent);border-color:var(--accent)}
+.modal-backdrop{position:fixed;inset:0;background:rgba(10,15,22,.46);backdrop-filter:blur(5px);display:none;align-items:center;justify-content:center;padding:18px;z-index:1000}.modal-backdrop.open{display:flex}.modal{width:min(820px,100%);max-height:min(82vh,760px);overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.25);display:flex;flex-direction:column}.modal-head{padding:18px 20px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.modal-title{margin:0;font-size:20px}.modal-meta{margin-top:4px;color:var(--muted);font-size:12px}.modal-close{width:36px;height:36px;padding:0;border-radius:10px;font-size:20px;line-height:1}.modal-body{overflow:auto;padding:14px}.post-list{display:grid;gap:10px}.post{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--surface-soft)}.post-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.post-stage{font-size:14px;font-weight:500;line-height:1.45}.post-cat{font-size:10px;padding:3px 7px;border-radius:999px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}.post-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:8px;color:var(--muted);font-size:11px}.post-link{color:var(--accent);text-decoration:none}.post-link:hover{text-decoration:underline}.post-link.disabled{color:var(--muted);pointer-events:none;opacity:.7}@media(max-width:620px){.modal-backdrop{padding:10px}.modal{max-height:88vh;border-radius:16px}.modal-head{padding:15px}.modal-body{padding:10px}.post{padding:11px 12px}.post-bottom{align-items:flex-end}}
+</style></head>
+<body><main class="wrap">
+<div class="topbar"><div class="title"><h1 id="pageTitle">무과금 편성 수록 랭킹</h1><div class="sub" id="pageSub"><span class="sub-jp">無課金枠縛り</span> Google Sheets 기준 · 플레이어명 표기 1칸 = 1건</div></div><div class="actions"><input class="search" id="search" type="search" placeholder="유저 검색" autocomplete="off"><button class="refresh" id="refresh">↻ 새로고침</button></div></div>
+<div class="status" id="status">최신 시트 데이터를 불러오는 중…</div><div class="error" id="error"></div>
+<div class="tablebox"><div class="table-head"><h2 id="rankTitle">전체 랭킹</h2></div><div class="table-wrap"><table><thead><tr><th class="rank" id="thRank">순위</th><th id="thPlayer">플레이어</th><th class="count" id="thCount">수록</th></tr></thead><tbody id="rows"></tbody></table></div></div>
+<div class="unknown"><span id="unknownText">불명 기록은 순위에서 제외합니다. 현재 불명 총합:</span> <b id="unknownBottom">-</b></div>
+<div class="footer" id="footerText">이 페이지는 Google Sheets 데이터를 브라우저에서 직접 읽어 순위를 계산합니다. 시트 수정 후 Google 측 데이터 반영에 약간의 지연이 생길 수 있습니다. 데이터가 갱신되지 않으면 ‘새로고침’을 눌러 주세요.</div>
+</main>
+
+<div class="modal-backdrop" id="playerModal" aria-hidden="true"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><div><h3 class="modal-title" id="modalTitle"></h3><div class="modal-meta" id="modalMeta"></div></div><button class="modal-close" id="modalClose" aria-label="닫기">×</button></div><div class="modal-body"><div class="post-list" id="postList"></div></div></section></div>
+<script>
+const SHEET_ID='12bhVk1tfC9N-U2eU9xie-XoW2gw85acQAukR-W2k3KY';
+const CATEGORIES_KR={'旧レ':'구레','真レ':'신레','零レ':'레제로','塔':'탑','降臨':'강림','強襲':'강습','超獣':'초수','開眼':'각성','コラボ':'콜라보','他':'기타'};
+const UI={title:'무과금 편성 수록 랭킹',sub:'Google Sheets 기준 · 플레이어명 표기 1칸 = 1건',search:'유저 검색',refresh:'↻ 새로고침',rankTitle:'전체 랭킹',rank:'순위',player:'플레이어',count:'수록',loading:'최신 시트 데이터를 불러오는 중…',last:'마지막 갱신: ',fail:'데이터 연결 실패',err:'시트 데이터를 직접 읽지 못했습니다.',unknown:'불명 기록은 순위에서 제외합니다. 현재 불명 총합:',footer:'이 페이지는 Google Sheets 데이터를 브라우저에서 직접 읽어 순위를 계산합니다. 시트 수정 후 Google 측 데이터 반영에 약간의 지연이 생길 수 있습니다. 데이터가 갱신되지 않으면 ‘새로고침’을 눌러 주세요.',meta:n=>`총 ${n}건 · 게시물 상세 정보`,video:'영상 보기 ↗',noVideo:'영상 링크 없음',noStage:'스테이지 정보 없음',noDate:'일자 정보 없음',info:'상세 정보 보기',close:'닫기'};
+function T(){return UI}
+function cats(){return CATEGORIES_KR}
+const KOREANS=new Set(['퓨츄','싱싱한뉴비','black rabbit','ノノ','sour','푸하하','hmmm','윾띵','프츠','light','인사','포적']);
+// 사용자가 확정한 동일인/표기 통합 규칙. 필요하면 여기에 계속 추가 가능.
+const ALIASES=new Map([
+ ['brack rabbit','black rabbit'],
+ ['black rabbit','black rabbit'],
+ ['被神眷顾的小初','被神眷顧的小初']
+]);
+const DISPLAY=new Map([['black rabbit','Black Rabbit'],['sour','기플'],['hmmm','Hmmm']]);
+let dataset=[];
+function normName(raw){
+ let s=String(raw??'').trim(); if(!s)return '';
+ // 영어 대소문자 통합. 한글/일본어/중국어에는 영향 없음.
+ let key=s.toLocaleLowerCase('en-US');
+ if(/^noname(?:\b|[\d._-])/i.test(s)||/^deleted\d*$/i.test(s)||s==='不明') return '__unknown__';
+ if(ALIASES.has(key)) key=ALIASES.get(key);
+ if(ALIASES.has(s)) key=ALIASES.get(s);
+ return key;
+}
+function displayName(key,raw){return DISPLAY.get(key)||raw}
+function parseCSV(text){let out=[],row=[],v='',q=false;for(let i=0;i<text.length;i++){let c=text[i];if(q){if(c==='"'&&text[i+1]==='"'){v+='"';i++}else if(c==='"')q=false;else v+=c}else{if(c==='"')q=true;else if(c===','){row.push(v);v=''}else if(c==='\n'){row.push(v.replace(/\r$/,''));out.push(row);row=[];v=''}else v+=c}}if(v||row.length){row.push(v);out.push(row)}return out}
+async function loadTab(tab){
+ const url=`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(tab)}&_=${Date.now()}`;
+ const r=await fetch(url,{cache:'no-store'}); if(!r.ok)throw new Error(`${tab}: HTTP ${r.status}`);
+ const rows=parseCSV(await r.text()); if(!rows.length)return [];
+ const headers=rows[0].map(x=>x.trim()); const playerCols=[];
+ headers.forEach((h,i)=>{if(h==='プレイヤー')playerCols.push(i)});
+ if(!playerCols.length)throw new Error(`${tab}: プレイヤー 열을 찾지 못했습니다.`);
+ const koreanCol=headers.findIndex(h=>h==='Korean'); let items=[]; for(let y=1;y<rows.length;y++)for(const x of playerCols){const raw=(rows[y][x]||'').trim();if(raw){const stage=(rows[y][x-9]||'').trim();const url=(rows[y][x-7]||'').trim();const date=(rows[y][x-1]||'').trim();const stageKr=koreanCol>=0?(rows[y][koreanCol]||'').trim():'';items.push({raw,tab,row:y+1,stage,stageKr,url,date})}}
+ return items;
+}
+async function load(){
+ const status=document.querySelector('#status'),err=document.querySelector('#error'); err.style.display='none'; status.textContent=T().loading;
+ try{
+  const chunks=await Promise.all(Object.keys(CATEGORIES_KR).map(loadTab)); const all=chunks.flat();
+  const map=new Map(); let unknown=0;
+  for(const item of all){const key=normName(item.raw);if(!key)continue;if(key==='__unknown__'){unknown++;continue}
+   if(!map.has(key))map.set(key,{key,name:displayName(key,item.raw),count:0,cats:{},raws:new Set(),posts:[]});
+   const p=map.get(key);p.count++;p.cats[item.tab]=(p.cats[item.tab]||0)+1;p.raws.add(item.raw);p.posts.push(item);
+  }
+  dataset=[...map.values()].sort((a,b)=>b.count-a.count||(Number(isKorean(b))-Number(isKorean(a)))||a.name.localeCompare(b.name));
+  window.__unknown=unknown; render();
+  status.textContent=T().last+new Intl.DateTimeFormat('ko-KR',{dateStyle:'medium',timeStyle:'medium'}).format(new Date());
+ }catch(e){console.error(e);err.style.display='block';err.innerHTML=`${T().err}<br><b>${String(e.message||e)}</b>`;status.textContent=T().fail;}
+}
+function isKorean(p){return KOREANS.has(p.key)||KOREANS.has(p.name)}
+function render(){
+ const q=(document.querySelector('#search').value||'').trim().toLocaleLowerCase();
+ let list=q?dataset.filter(p=>p.name.toLocaleLowerCase().includes(q)||[...p.raws].some(x=>x.toLocaleLowerCase().includes(q))):dataset;
+ const overallRank=new Map();const firstOfRank=new Set();let prev=null,rank=0;
+ dataset.forEach((p,i)=>{if(p.count!==prev){rank=i+1;firstOfRank.add(p.key)}prev=p.count;overallRank.set(p.key,rank)});
+ const tbody=document.querySelector('#rows');tbody.innerHTML='';
+ list.forEach(p=>{const r=overallRank.get(p.key);const cat=Object.entries(p.cats).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`${cats()[k]} ${v}`).join(' · ');
+  const tr=document.createElement('tr');if(isKorean(p))tr.classList.add('kr-row');if(firstOfRank.has(p.key))tr.classList.add('rank-group-start');else tr.classList.add('rank-tie');
+  const showRank=firstOfRank.has(p.key);
+  const rankHtml=!showRank?'':r===1?'<span class="medal" title="1위">🥇</span>':r===2?'<span class="medal" title="2위">🥈</span>':r===3?'<span class="medal" title="3위">🥉</span>':String(r);
+  tr.innerHTML=`<td class="rank">${rankHtml}</td><td><span class="player"></span><span class="badge-slot"></span><div class="details"></div></td><td class="count"><button class="info-btn" type="button" aria-label="${T().info}" title="${T().info}">i</button>${p.count}</td>`;
+  const playerEl=tr.querySelector('.player');playerEl.textContent=p.name;if(isKorean(p)){const badge=document.createElement('span');badge.className='kr-badge';badge.textContent='KR';tr.querySelector('.badge-slot').appendChild(badge)}playerEl.addEventListener('click',()=>openPlayer(p));tr.querySelector('.info-btn').addEventListener('click',()=>openPlayer(p));tr.querySelector('.details').textContent=cat;tbody.appendChild(tr)
+ });
+ document.querySelector('#unknownBottom').textContent=(window.__unknown||0).toLocaleString()+'건';
+}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+
+const STAGE_KR_EXACT={
+ 'ネコ補完計画 極ムズ':'고양이 보완 계획 극난도','新約・ネコ補完計画 極ムズ':'신약・고양이 보완 계획 극난도',
+ '世界の中心でアイを叫んだネコ 超極ムズ':'세계의 중심에서 사랑을 외친 고양이 초극난도','修羅の道 極ムズ':'수라의 길 극난도',
+ '阿・修羅の道 極ムズ':'아・수라의 길 극난도','羅刹街道 超極ムズ':'나찰 가도 초극난도','ハニートラップ 極ムズ':'허니 트랩 극난도'
+};
+function fallbackStageKr(stage){if(!stage)return T().noStage;if(STAGE_KR_EXACT[stage])return STAGE_KR_EXACT[stage];return stage
+ .replace(/超極ムズ/g,'초극난도').replace(/極ムズ/g,'극난도').replace(/神ムズ/g,'신난도').replace(/激ムズ/g,'격난도').replace(/超激ムズ/g,'초격난도')
+ .replace(/大試練/g,'대시련').replace(/への道/g,'의 길').replace(/本能開放/g,'본능 해방').replace(/解放/g,'해방').replace(/宇宙編/g,'우주편').replace(/ゾンビ/g,'좀비').replace(/ビッグバン/g,'빅뱅');}
+
+function openPlayer(p){
+ const modal=document.querySelector('#playerModal');document.querySelector('#modalTitle').textContent=p.name;document.querySelector('#modalMeta').textContent=T().meta(p.count);
+ const posts=[...p.posts].sort((a,b)=>{const da=parseDate(a.date),db=parseDate(b.date);return db-da||a.tab.localeCompare(b.tab)});
+ document.querySelector('#postList').innerHTML=posts.map(x=>{const valid=x.url&&/^https?:\/\//i.test(x.url)&&x.url.toLowerCase()!=='not found';const stage=x.stage||T().noStage;const date=x.date||T().noDate;const translated=x.stageKr||fallbackStageKr(stage);return `<article class="post"><div class="post-top"><div class="post-stage">${esc(stage)}</div><span class="post-cat">${esc(cats()[x.tab]||x.tab)}</span></div><div class="post-bottom"><span>${esc(translated)} · ${esc(date)}</span>${valid?`<a class="post-link" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${T().video}</a>`:`<span class="post-link disabled">${T().noVideo}</span>`}</div></article>`}).join('');
+ modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+}
+function parseDate(s){const m=String(s||'').match(/^(\d{2})\/(\d{1,2})\/(\d{1,2})$/);if(!m)return 0;return new Date(2000+Number(m[1]),Number(m[2])-1,Number(m[3])).getTime()}
+function closePlayer(){const m=document.querySelector('#playerModal');m.classList.remove('open');m.setAttribute('aria-hidden','true');document.body.style.overflow=''}
+document.querySelector('#modalClose').addEventListener('click',closePlayer);document.querySelector('#playerModal').addEventListener('click',e=>{if(e.target.id==='playerModal')closePlayer()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closePlayer()});
+document.querySelector('#search').addEventListener('input',render);
+document.querySelector('#refresh').onclick=load;
+load(); setInterval(load,60000);
+</script></body></html>
