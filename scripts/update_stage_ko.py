@@ -4,15 +4,12 @@ import csv
 import io
 import json
 import re
+import html
 import time
-import html as htmlmod
 from pathlib import Path
-from urllib.parse import quote, urlencode
+from urllib.parse import urljoin, urlparse, parse_qs, urlencode
 from urllib.request import Request, urlopen
-
-# =========================================================
-# 설정
-# =========================================================
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 SHEET_ID = "12bhVk1tfC9N-U2eU9xie-XoW2gw85acQAukR-W2k3KY"
 
@@ -29,33 +26,30 @@ SHEETS = [
     "他",
 ]
 
-# 구레 / 신레 / 레제로는 시트 자체에 Korean 열이 존재하므로
-# 외부 DB보다 시트 번역을 우선 사용
-SHEET_KOREAN_TABS = {
-    "旧レ",
-    "真レ",
-    "零レ",
-}
-
 BASE = "https://battlecats.anypupil.com/"
+START = BASE + "stages.php?lang=ko"
+
 OUT = Path(__file__).resolve().parents[1] / "stage-ko.json"
 
 UA = (
     "Mozilla/5.0 "
-    "(compatible; BattleCatsStageNameSync/3.0; GitHubActions)"
+    "(compatible; BattleCatsStageNameSync/4.0; GitHubActions)"
 )
+
+# 동시에 너무 많이 요청하지 않도록 16개
+WORKERS = 16
 
 
 # =========================================================
 # HTTP
 # =========================================================
 
-def get(url, timeout=25):
+def get(url, timeout=30):
     req = Request(
         url,
         headers={
             "User-Agent": UA,
-            "Accept-Language": "ko-KR,ko;q=0.9,ja;q=0.7,en;q=0.5",
+            "Accept-Language": "ko-KR,ko;q=0.9,ja;q=0.8",
         },
     )
 
@@ -79,68 +73,76 @@ def clean(text):
     )
 
     text = re.sub(r"<[^>]+>", " ", text)
-    text = htmlmod.unescape(text)
+    text = html.unescape(text)
     text = re.sub(r"\s+", " ", text)
 
     return text.strip()
 
 
-def normalize_jp(text):
+def normalize(text):
     if not text:
         return ""
 
     return (
         re.sub(r"\s+", " ", text)
         .strip()
+        .replace("　", " ")
         .replace("Lv．", "Lv.")
         .replace("Ｌｖ．", "Lv.")
-        .replace("　", " ")
     )
 
 
-def valid_korean(text):
+def has_japanese(text):
+    return bool(
+        re.search(r"[ぁ-んァ-ン一-龯々]", text)
+    )
+
+
+def has_korean(text):
+    return bool(
+        re.search(r"[가-힣]", text)
+    )
+
+
+def valid_ko(text):
     if not text:
         return False
 
-    bad = (
-        "未命名",
+    bad = [
         "미명명",
-        "Unnamed",
+        "未命名",
         "unknown",
+        "unnamed",
         "不明",
-    )
+    ]
 
-    low = text.lower()
+    lower = text.lower()
 
-    if any(x.lower() in low for x in bad):
+    if any(x.lower() in lower for x in bad):
         return False
 
-    return bool(re.search(r"[가-힣]", text))
+    return has_korean(text)
 
 
 # =========================================================
-# Google Sheet 읽기
+# Google Sheet
 # =========================================================
 
-def sheet_csv_url(sheet):
+def sheet_url(name):
     return (
-        f"https://docs.google.com/spreadsheets/d/"
+        "https://docs.google.com/spreadsheets/d/"
         f"{SHEET_ID}/gviz/tq?"
         + urlencode(
             {
                 "tqx": "out:csv",
-                "sheet": sheet,
+                "sheet": name,
             }
         )
     )
 
 
-def read_sheet(sheet):
-    url = sheet_csv_url(sheet)
-
-    print(f"[Sheet] {sheet}")
-
-    raw = get(url)
+def read_sheet(name):
+    raw = get(sheet_url(name))
 
     return list(
         csv.reader(
@@ -148,10 +150,6 @@ def read_sheet(sheet):
         )
     )
 
-
-# =========================================================
-# 플레이어 블록 및 스테이지 추출
-# =========================================================
 
 def find_player_columns(header):
     return [
@@ -161,160 +159,70 @@ def find_player_columns(header):
     ]
 
 
-def extract_sheet_stages(sheet, rows):
-    """
-    プレイヤー 열을 기준으로 같은 데이터 블록의
-    ステージ 열을 찾아 실제 등록된 스테이지만 추출한다.
-    """
+def collect_sheet_stages():
 
-    if not rows:
-        return set(), {}
-
-    header = rows[0]
-
-    player_cols = find_player_columns(header)
-
-    stages = set()
-    korean = {}
-
-    for pcol in player_cols:
-
-        # 기본 데이터 구조:
-        #
-        # ステージ ... 日付* プレイヤー
-        #
-        # プレイヤー에서 왼쪽으로 가장 가까운
-        # ステージ 헤더를 찾는다.
-
-        scol = None
-
-        for c in range(pcol - 1, -1, -1):
-            if header[c].strip() == "ステージ":
-                scol = c
-                break
-
-        # 零レ 첫 블록처럼 헤더 오타/특수구조가 있을 수 있으므로
-        # プレイヤー 기준 9칸 왼쪽도 fallback
-        if scol is None:
-            fallback = pcol - 9
-
-            if fallback >= 0:
-                scol = fallback
-
-        if scol is None:
-            continue
-
-        for row in rows[1:]:
-
-            if pcol >= len(row):
-                continue
-
-            player = row[pcol].strip()
-
-            # 실제 게시자 기록이 없는 행은 굳이 처리하지 않음
-            if not player:
-                continue
-
-            if scol >= len(row):
-                continue
-
-            jp = normalize_jp(
-                row[scol]
-            )
-
-            if jp:
-                stages.add(jp)
-
-    # -----------------------------------------------------
-    # 구레 / 신레 / 레제로 Korean 열
-    # -----------------------------------------------------
-
-    if sheet in SHEET_KOREAN_TABS:
-
-        korean_col = None
-
-        for i, value in enumerate(header):
-            if value.strip() == "Korean":
-                korean_col = i
-                break
-
-        if korean_col is not None:
-
-            # 번역표는 보통 마지막 데이터 블록 오른쪽에 존재.
-            # Korean 열과 같은 행에 있는 일본어 스테이지명을
-            # 플레이어 블록에서 찾는다.
-
-            stage_columns = [
-                i
-                for i, value in enumerate(header)
-                if value.strip() == "ステージ"
-            ]
-
-            # 零レ 첫 블록의 헤더가 マップ으로 잘못 적힌 경우
-            if sheet == "零レ" and 2 not in stage_columns:
-                stage_columns.insert(0, 2)
-
-            # 번역표와 가장 자연스럽게 대응되는 첫 번째
-            # 스테이지 열을 기준으로 행별 매칭
-            if stage_columns:
-                reference_stage_col = stage_columns[0]
-
-                for row in rows[1:]:
-
-                    if (
-                        reference_stage_col >= len(row)
-                        or korean_col >= len(row)
-                    ):
-                        continue
-
-                    jp = normalize_jp(
-                        row[reference_stage_col]
-                    )
-
-                    ko = row[korean_col].strip()
-
-                    if (
-                        jp
-                        and valid_korean(ko)
-                    ):
-                        korean[jp] = ko
-
-    return stages, korean
-
-
-# =========================================================
-# 현재 시트 전체 스테이지 목록
-# =========================================================
-
-def collect_sheet_data():
-
-    all_stages = set()
-    sheet_korean = {}
+    result = set()
 
     for sheet in SHEETS:
+
+        print(f"[SHEET] {sheet}")
 
         try:
             rows = read_sheet(sheet)
 
-            stages, korean = extract_sheet_stages(
-                sheet,
-                rows,
-            )
-
-            all_stages.update(stages)
-            sheet_korean.update(korean)
-
-            print(
-                f"  stages={len(stages)} "
-                f"korean={len(korean)}"
-            )
-
         except Exception as e:
-            print(
-                f"[Sheet error] {sheet}: {e}"
-            )
+            print("  ERROR:", e)
+            continue
 
-    return all_stages, sheet_korean
+        if not rows:
+            continue
+
+        header = rows[0]
+
+        player_cols = find_player_columns(header)
+
+        for pcol in player_cols:
+
+            scol = None
+
+            # 같은 블록에서 가장 가까운 ステージ 찾기
+            for c in range(pcol - 1, -1, -1):
+
+                if (
+                    c < len(header)
+                    and header[c].strip() == "ステージ"
+                ):
+                    scol = c
+                    break
+
+            # 특수 구조 fallback
+            if scol is None:
+                fallback = pcol - 9
+
+                if fallback >= 0:
+                    scol = fallback
+
+            if scol is None:
+                continue
+
+            for row in rows[1:]:
+
+                if (
+                    pcol >= len(row)
+                    or scol >= len(row)
+                ):
+                    continue
+
+                player = row[pcol].strip()
+                stage = normalize(row[scol])
+
+                if player and stage:
+                    result.add(stage)
+
+    print()
+    print("Sheet unique stages:", len(result))
+
+    return result
 
 
 # =========================================================
@@ -328,336 +236,415 @@ def load_existing():
 
     try:
         data = json.loads(
-            OUT.read_text(
-                encoding="utf-8"
-            )
+            OUT.read_text(encoding="utf-8")
         )
 
-        return data.get(
-            "stages",
-            {}
-        )
+        return {
+            normalize(k): v
+            for k, v in data.get(
+                "stages",
+                {}
+            ).items()
+            if valid_ko(v)
+        }
 
     except Exception as e:
-        print(
-            "[JSON load error]",
-            e,
-        )
-
+        print("Existing JSON error:", e)
         return {}
 
 
 # =========================================================
-# 한국 DB 검색
+# stages.php에서 모든 맵 URL 확보
 # =========================================================
 
-def search_db(jp_name):
-    """
-    DB 검색 결과에서 stage.php?sid=... 후보를 찾는다.
-    """
+def get_map_urls():
 
-    query = quote(jp_name)
+    print()
+    print("[1/4] Reading stage index...")
 
-    candidates = [
-        f"{BASE}search.php?q={query}&lang=ko",
-        f"{BASE}search.php?keyword={query}&lang=ko",
-    ]
+    doc = get(START)
 
-    sids = []
+    urls = set()
 
-    for url in candidates:
+    for href in re.findall(
+        r'href=["\']([^"\']+)["\']',
+        doc,
+        flags=re.I,
+    ):
 
-        try:
-            doc = get(url)
+        href = html.unescape(href)
 
-        except Exception:
+        url = urljoin(BASE, href)
+
+        parsed = urlparse(url)
+
+        if not parsed.path.endswith("stage_map.php"):
             continue
 
-        found = re.findall(
-            r'stage\.php\?[^"\']*sid=([A-Za-z0-9_-]+)',
-            doc,
-            flags=re.I,
+        qs = parse_qs(parsed.query)
+
+        if not qs.get("id"):
+            continue
+
+        map_id = qs["id"][0]
+
+        urls.add(
+            BASE
+            + "stage_map.php?"
+            + urlencode(
+                {
+                    "id": map_id,
+                    "lang": "ko",
+                }
+            )
         )
 
-        for sid in found:
-            if sid not in sids:
-                sids.append(sid)
+    urls = sorted(urls)
 
-        if sids:
-            break
+    print("Map pages:", len(urls))
 
-    return sids
+    return urls
 
 
 # =========================================================
-# 상세 페이지에서 JP / KO 이름 추출
+# 맵 페이지 검색
 # =========================================================
 
-def parse_stage_page(sid):
+def scan_map(url, missing):
 
-    url = (
-        f"{BASE}stage.php?"
-        f"lang=ko&sid={quote(sid)}"
-    )
+    try:
+        doc = get(url)
 
-    doc = get(url)
+    except Exception:
+        return []
 
-    # 페이지 전체 텍스트 후보
-    texts = [
-        clean(x)
-        for x in re.findall(
-            r">([^<>]{1,200})<",
-            doc,
-            flags=re.S,
+    text = normalize(clean(doc))
+
+    # 이 맵에 우리가 원하는 일본어명이 하나라도 없으면
+    # stage.php 링크를 분석할 필요 없음
+    matched = [
+        stage
+        for stage in missing
+        if stage in text
+    ]
+
+    if not matched:
+        return []
+
+    stage_urls = set()
+
+    for href in re.findall(
+        r'href=["\']([^"\']*stage\.php[^"\']*)["\']',
+        doc,
+        flags=re.I,
+    ):
+
+        href = html.unescape(href)
+
+        url2 = urljoin(BASE, href)
+
+        parsed = urlparse(url2)
+        qs = parse_qs(parsed.query)
+
+        if not qs.get("sid"):
+            continue
+
+        sid = qs["sid"][0]
+
+        stage_urls.add(
+            BASE
+            + "stage.php?"
+            + urlencode(
+                {
+                    "lang": "ko",
+                    "sid": sid,
+                }
+            )
         )
-    ]
 
-    texts = [
-        x
-        for x in texts
-        if x
-    ]
+    return list(stage_urls)
 
-    ko = ""
-    jp = ""
 
-    # h1을 한국어 이름 우선 후보로 사용
+# =========================================================
+# stage.php 파싱
+# =========================================================
+
+def parse_stage_page(url):
+
+    try:
+        doc = get(url)
+
+    except Exception:
+        return None
+
+    # h1 = 현재 언어(한국어)의 스테이지명인 경우가 많음
     h1 = re.search(
         r"<h1[^>]*>(.*?)</h1>",
         doc,
         flags=re.S | re.I,
     )
 
+    ko = ""
+
     if h1:
-        h1_text = clean(
-            h1.group(1)
+        candidate = normalize(
+            clean(h1.group(1))
         )
 
-        if valid_korean(h1_text):
-            ko = h1_text
+        if valid_ko(candidate):
+            ko = candidate
 
-    # 일본어 문자열 탐색
-    for text in texts:
+    # 페이지에서 일본어 원문 찾기
+    texts = []
 
-        if (
-            re.search(
-                r"[ぁ-んァ-ン一-龯]",
-                text,
-            )
-            and not re.search(
-                r"[가-힣]",
-                text,
-            )
-        ):
-            jp = normalize_jp(
-                text
-            )
+    for value in re.findall(
+        r">([^<>]{1,180})<",
+        doc,
+        flags=re.S,
+    ):
 
-            break
+        value = normalize(
+            html.unescape(value)
+        )
 
-    # h1이 아니더라도 한국어명 탐색
-    if not ko:
+        if value:
+            texts.append(value)
 
-        for text in texts:
+    jp_candidates = [
+        x
+        for x in texts
+        if has_japanese(x)
+        and not has_korean(x)
+    ]
 
-            if valid_korean(text):
-                ko = text
-                break
-
-    if not jp or not ko:
+    if not jp_candidates:
         return None
 
-    return jp, ko
+    # h1 바로 다음에 나오는 일본어 원문이 가장 유력
+    if h1:
 
+        tail = doc[h1.end():h1.end() + 1500]
 
-# =========================================================
-# 일본어 이름 하나 조회
-# =========================================================
-
-def lookup_korean(jp_name):
-
-    sids = search_db(jp_name)
-
-    if not sids:
-        return None
-
-    normalized_target = normalize_jp(
-        jp_name
-    )
-
-    # 검색 결과가 여러 개일 수 있으므로
-    # 일본어 원문이 정확히 일치하는 것만 인정
-    for sid in sids[:10]:
-
-        try:
-            pair = parse_stage_page(
-                sid
+        tail_texts = [
+            normalize(html.unescape(x))
+            for x in re.findall(
+                r">([^<>]{1,180})<",
+                tail,
+                flags=re.S,
             )
+        ]
 
-        except Exception as e:
-            print(
-                f"    sid={sid} error={e}"
-            )
+        for x in tail_texts:
 
-            continue
+            if (
+                x
+                and has_japanese(x)
+                and not has_korean(x)
+            ):
+                jp = x
 
-        if not pair:
-            continue
+                if ko:
+                    return normalize(jp), ko
 
-        jp, ko = pair
-
-        if (
-            normalize_jp(jp)
-            == normalized_target
-            and valid_korean(ko)
-        ):
-            return ko
+    # fallback
+    if ko:
+        return normalize(jp_candidates[0]), ko
 
     return None
 
 
 # =========================================================
-# 메인
+# main
 # =========================================================
 
 def main():
 
     print(
-        "=== Battle Cats Korean Stage Sync v3 ==="
+        "=== Battle Cats Korean Stage Sync v4 ==="
     )
 
-    # 현재 시트 스테이지
-    all_stages, sheet_korean = (
-        collect_sheet_data()
-    )
+    # -----------------------------------------------------
+    # 시트
+    # -----------------------------------------------------
 
-    print()
-    print(
-        "Sheet stage count:",
-        len(all_stages),
-    )
+    sheet_stages = collect_sheet_stages()
+
+    existing = load_existing()
 
     print(
-        "Sheet Korean names:",
-        len(sheet_korean),
+        "Existing translations:",
+        len(existing),
     )
 
-    # 기존 캐시
-    stages = load_existing()
+    # 기존 번역 중 현재 시트에 있는 것만 유지
+    translations = {
+        jp: ko
+        for jp, ko in existing.items()
+        if jp in sheet_stages
+    }
 
-    print(
-        "Existing cache:",
-        len(stages),
-    )
-
-    # 시트 자체의 한국어명은 무조건 우선
-    for jp, ko in sheet_korean.items():
-
-        if jp in all_stages:
-            stages[jp] = ko
-
-    # 이미 번역된 것은 재검색하지 않는다.
-    missing = sorted(
-        stage
-        for stage in all_stages
-        if stage not in stages
-    )
+    missing = {
+        x
+        for x in sheet_stages
+        if x not in translations
+    }
 
     print(
         "Need lookup:",
         len(missing),
     )
 
-    found = 0
-    not_found = []
+    if not missing:
 
-    for index, jp in enumerate(
-        missing,
-        1,
-    ):
+        print("Nothing to update.")
+        return
 
-        print(
-            f"[{index}/{len(missing)}] "
-            f"{jp}"
-        )
+    # -----------------------------------------------------
+    # 모든 맵 URL
+    # -----------------------------------------------------
 
-        try:
+    map_urls = get_map_urls()
 
-            ko = lookup_korean(
-                jp
-            )
+    print()
+    print(
+        "[2/4] Scanning map pages in parallel..."
+    )
 
-            if ko:
+    stage_urls = set()
 
-                stages[jp] = ko
-                found += 1
+    done = 0
 
+    with ThreadPoolExecutor(
+        max_workers=WORKERS
+    ) as pool:
+
+        futures = {
+            pool.submit(
+                scan_map,
+                url,
+                missing,
+            ): url
+            for url in map_urls
+        }
+
+        for future in as_completed(futures):
+
+            done += 1
+
+            try:
+                found = future.result()
+
+                stage_urls.update(found)
+
+            except Exception:
+                pass
+
+            if done % 100 == 0:
                 print(
-                    "  ->",
-                    ko,
+                    f"  maps {done}/{len(map_urls)}"
                 )
 
-            else:
+    print(
+        "Candidate stage pages:",
+        len(stage_urls),
+    )
 
-                not_found.append(
-                    jp
-                )
+    # -----------------------------------------------------
+    # 상세 페이지
+    # -----------------------------------------------------
 
+    print()
+    print(
+        "[3/4] Reading candidate stages..."
+    )
+
+    discovered = {}
+
+    done = 0
+
+    with ThreadPoolExecutor(
+        max_workers=WORKERS
+    ) as pool:
+
+        futures = {
+            pool.submit(
+                parse_stage_page,
+                url,
+            ): url
+            for url in stage_urls
+        }
+
+        for future in as_completed(futures):
+
+            done += 1
+
+            try:
+                pair = future.result()
+
+            except Exception:
+                pair = None
+
+            if pair:
+
+                jp, ko = pair
+
+                if (
+                    jp in missing
+                    and valid_ko(ko)
+                ):
+                    # 같은 일본어 이름이 여러 맵에 있을 경우
+                    # 한국어명이 동일하면 그대로 사용
+                    if jp not in discovered:
+                        discovered[jp] = ko
+
+                    elif discovered[jp] != ko:
+                        print(
+                            "AMBIGUOUS:",
+                            jp,
+                            "=>",
+                            discovered[jp],
+                            "/",
+                            ko,
+                        )
+
+            if done % 100 == 0:
                 print(
-                    "  -> Korean version not found"
+                    f"  stages {done}/{len(stage_urls)}"
                 )
 
-        except Exception as e:
+    translations.update(discovered)
 
-            not_found.append(
-                jp
-            )
+    # -----------------------------------------------------
+    # 결과
+    # -----------------------------------------------------
 
-            print(
-                "  -> error:",
-                e,
-            )
-
-        # 서버에 과도한 요청을 보내지 않도록
-        # 아주 짧은 간격
-        time.sleep(0.12)
-
-    # 현재 시트에 존재하는 스테이지만 JSON에 유지
-    # 예전에 삭제된 스테이지 데이터가 무한히 쌓이는 것을 방지
-    filtered = {
-        jp: ko
-        for jp, ko in stages.items()
-        if jp in all_stages
-        and valid_korean(ko)
-    }
+    unresolved = sorted(
+        x
+        for x in sheet_stages
+        if x not in translations
+    )
 
     payload = {
         "source": BASE,
-        "generated_by": (
-            "scripts/update_stage_ko.py v3"
-        ),
+        "generated_by":
+            "scripts/update_stage_ko.py v4",
         "sheet_id": SHEET_ID,
-        "sheet_stage_count": len(
-            all_stages
-        ),
-        "count": len(
-            filtered
-        ),
-        "untranslated_count": len(
-            all_stages
-        ) - len(filtered),
-        "note": (
-            "Google Sheet에 현재 존재하는 "
-            "스테이지만 대상으로 한국판 명칭을 "
-            "동기화합니다. 기존 번역은 캐시하며 "
-            "한국판 명칭이 확인되지 않는 스테이지는 "
-            "등록하지 않습니다."
-        ),
+        "sheet_stage_count":
+            len(sheet_stages),
+        "count":
+            len(translations),
+        "untranslated_count":
+            len(unresolved),
+        "note":
+            "battlecats.anypupil.com의 실제 "
+            "스테이지 인덱스와 맵 구조를 순회하여 "
+            "한국어판 명칭이 확인된 스테이지만 저장합니다.",
         "stages": dict(
             sorted(
-                filtered.items()
+                translations.items()
             )
         ),
+        "untranslated": unresolved,
     }
 
     OUT.write_text(
@@ -672,37 +659,31 @@ def main():
 
     print()
     print(
-        "=== Complete ==="
+        "[4/4] Complete"
     )
 
     print(
-        "New names:",
-        found,
+        "Found this run:",
+        len(discovered),
     )
 
     print(
-        "Total Korean names:",
-        len(filtered),
+        "Total translated:",
+        len(translations),
     )
 
     print(
-        "Untranslated / unreleased:",
-        len(all_stages)
-        - len(filtered),
+        "Still untranslated:",
+        len(unresolved),
     )
 
-    if not_found:
+    if unresolved:
 
         print()
-        print(
-            "Not found:"
-        )
+        print("UNRESOLVED:")
 
-        for stage in not_found:
-            print(
-                " -",
-                stage,
-            )
+        for x in unresolved:
+            print(" -", x)
 
 
 if __name__ == "__main__":
