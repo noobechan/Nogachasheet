@@ -28,7 +28,7 @@ jobs:
 
       - name: Update Korean stage database
         run: |
-          python scripts/update_stage_ko.py
+          python scripts/update_stage_kor.py
 
       - name: Commit changes
         run: |
