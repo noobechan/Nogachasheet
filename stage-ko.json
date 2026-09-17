@@ -1,13 +1,12 @@
 {
   "source": "https://battlecats.anypupil.com/",
-  "generated_by": "scripts/update_stage_ko.py v5",
+  "generated_by": "scripts/update_stage_ko.py v6",
   "sheet_id": "12bhVk1tfC9N-U2eU9xie-XoW2gw85acQAukR-W2k3KY",
   "sheet_context_count": 1184,
   "count": 1052,
   "context_count": 918,
   "untranslated_count": 266,
-  "ambiguous_count": 0,
-  "note": "검증된 한국어명만 저장합니다. 조회는 category|map|stage 문맥을 우선하고, 고유한 stage 이름만 단순 키로 보조합니다.",
+  "note": "v6: 중복 일본어 스테이지명도 외부 DB에서 발견한 한국어명을 그대로 적용합니다. 本能解放への道만 무트/발키리를 맵 문맥으로 구분합니다.",
   "stages": {
     "13日の給料日": "13일의 월급날",
     "22時22分の観測者": "22시 22분의 관측자",
@@ -3313,6 +3312,5 @@
       "map": "古代神樹",
       "stage": "起源の覚醒[EX]"
     }
-  ],
-  "ambiguous": []
+  ]
 }
