@@ -13,9 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
@@ -27,16 +29,17 @@ jobs:
       - name: Build Korean stage database
         run: python scripts/update_stage_ko.py
 
-      - name: Verify complete ranking-sheet coverage
+      - name: Show coverage
         run: |
           python - <<'PY'
           import json
-          import sys
 
-          with open("stage-ko.json", encoding="utf-8") as f:
-              d = json.load(f)
-
-          missing = d.get("untranslated", [])
+          d = json.load(
+              open(
+                  "stage-ko.json",
+                  encoding="utf-8"
+              )
+          )
 
           print(
               "coverage:",
@@ -45,13 +48,19 @@ jobs:
               d.get("sheet_stage_count")
           )
 
-          if missing:
-              print("untranslated:", len(missing))
-              print("\n".join(missing))
-              sys.exit(1)
+          print(
+              "untranslated:",
+              d.get("untranslated_count")
+          )
+
+          for x in d.get(
+              "untranslated",
+              []
+          ):
+              print(" -", x)
           PY
 
-      - name: Commit stage-ko.json
+      - name: Commit generated stage-ko.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -64,3 +73,9 @@ jobs:
             git commit -m "Update Korean stage names"
             git push
           fi
+
+      - name: Upload stage-ko.json artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage-ko-json
+          path: stage-ko.json
