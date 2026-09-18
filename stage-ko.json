@@ -1,11 +1,11 @@
 {
-  "source": "https://battlecats.anypupil.com/",
-  "generated_by": "scripts/update_stage_ko.py v5 (seeded from v4; run Action to enrich)",
+  "source": "battlecats.anypupil.com Korean bilingual stage pages + kr-stage-names.txt + previous verified stage-ko.json",
+  "generated_by": "scripts/update_stage_ko.py v3",
   "sheet_id": "12bhVk1tfC9N-U2eU9xie-XoW2gw85acQAukR-W2k3KY",
   "sheet_stage_count": 1294,
-  "count": 1052,
+  "sheet_translated_count": 1052,
   "untranslated_count": 242,
-  "note": "battlecats.anypupil.com의 실제 스테이지 인덱스와 맵 구조를 순회하여 한국어판 명칭이 확인된 스테이지만 저장합니다.",
+  "count": 1052,
   "stages": {
     "13日の給料日": "13일의 월급날",
     "22時22分の観測者": "22시 22분의 관측자",
@@ -1059,6 +1059,4216 @@
     "３つの運命": "3개의 운명",
     "８K肥溜め": "8K 거름밭",
     "ＤＮＡとＤＨＡ": "DNA와 DHA"
+  },
+  "evidence": {
+    "13日の給料日": {
+      "ko": "13일의 월급날",
+      "method": "previous_verified"
+    },
+    "22時22分の観測者": {
+      "ko": "22시 22분의 관측자",
+      "method": "previous_verified"
+    },
+    "Be Bee クイーン 超極ムズ": {
+      "ko": "Be Bee 퀸 초극난도",
+      "method": "previous_verified"
+    },
+    "Mr.進化への道 超激ムズ": {
+      "ko": "Mr. 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "Mrs.ドスの墓": {
+      "ko": "Mrs.DOS의 묘",
+      "method": "previous_verified"
+    },
+    "N-1グランプリ 極ムズ": {
+      "ko": "N-1 그랑프리 극난도",
+      "method": "previous_verified"
+    },
+    "N-1グランプリ決勝 超極ムズ": {
+      "ko": "N-1 그랑프리 결승 초극난도",
+      "method": "previous_verified"
+    },
+    "N.G.牧場": {
+      "ko": "N.G.목장",
+      "method": "previous_verified"
+    },
+    "VIP倉庫": {
+      "ko": "VIP창고",
+      "method": "previous_verified"
+    },
+    "VR稲刈り場": {
+      "ko": "VR 벼 수확",
+      "method": "previous_verified"
+    },
+    "VSエドモンド本田 激ムズ": {
+      "ko": "VS E. HONDA 고난도",
+      "method": "previous_verified"
+    },
+    "VSガイル 激ムズ": {
+      "ko": "VS가일 고난도",
+      "method": "previous_verified"
+    },
+    "VSケン 激ムズ": {
+      "ko": "VS켄 고난도",
+      "method": "previous_verified"
+    },
+    "VSサガット 超激ムズ": {
+      "ko": "VS사가트 초고난도",
+      "method": "previous_verified"
+    },
+    "VSザンギエフ 激ムズ": {
+      "ko": "VS장기에프 고난도",
+      "method": "previous_verified"
+    },
+    "VSダルシム 激ムズ": {
+      "ko": "VS달심 고난도",
+      "method": "previous_verified"
+    },
+    "VSバイソン 超激ムズ": {
+      "ko": "VS바이슨 초고난도",
+      "method": "previous_verified"
+    },
+    "VSバルログ 超激ムズ": {
+      "ko": "VS발로그 초고난도",
+      "method": "previous_verified"
+    },
+    "VSブランカ 激ムズ": {
+      "ko": "VS블랑카 고난도",
+      "method": "previous_verified"
+    },
+    "VSベガ 超激ムズ": {
+      "ko": "VS베가 초고난도",
+      "method": "previous_verified"
+    },
+    "VSリュウ 激ムズ": {
+      "ko": "VS류 고난도",
+      "method": "previous_verified"
+    },
+    "VS春麗 激ムズ": {
+      "ko": "VS춘리 고난도",
+      "method": "previous_verified"
+    },
+    "WANLAND 超極ムズ": {
+      "ko": "WANLAND 초극난도",
+      "method": "previous_verified"
+    },
+    "WANLAND２号店 超極ムズ": {
+      "ko": "WANLAND 2호점 초극난도",
+      "method": "previous_verified"
+    },
+    "あかぎれジャンクション": {
+      "ko": "아이스 사거리",
+      "method": "previous_verified"
+    },
+    "あこぎな出国料": {
+      "ko": "※우천시 폐장",
+      "method": "previous_verified"
+    },
+    "あてなき押し問答": {
+      "ko": "결론 없는 논쟁",
+      "method": "previous_verified"
+    },
+    "あなた疲れてるのよ": {
+      "ko": "만성 피로",
+      "method": "previous_verified"
+    },
+    "あの世とこの世の境界線": {
+      "ko": "저 세상과의 경계선",
+      "method": "previous_verified"
+    },
+    "あの世行き往復券": {
+      "ko": "저세상 왕복 티켓",
+      "method": "previous_verified"
+    },
+    "あの恐怖、再び": {
+      "ko": "그 공포, 또다시",
+      "method": "previous_verified"
+    },
+    "あまくだり海流": {
+      "ko": "낙하산 해류",
+      "method": "previous_verified"
+    },
+    "あやしい自治体": {
+      "ko": "수상한 지방자치제",
+      "method": "previous_verified"
+    },
+    "いけにえ体験学習": {
+      "ko": "산제물 체험",
+      "method": "previous_verified"
+    },
+    "いけにえ沼": {
+      "ko": "희생양",
+      "method": "previous_verified"
+    },
+    "いさりびヘッド": {
+      "ko": "어화 둥둥 헤드",
+      "method": "previous_verified"
+    },
+    "いてもうたロード": {
+      "ko": "가가 가가 가가?",
+      "method": "previous_verified"
+    },
+    "いにしえのビキニ": {
+      "ko": "고대의 비키니",
+      "method": "previous_verified"
+    },
+    "いにしえの裁判": {
+      "ko": "고대의 재판",
+      "method": "previous_verified"
+    },
+    "いにしえ深海ブルース": {
+      "ko": "고대의 심해 블루스",
+      "method": "previous_verified"
+    },
+    "いびき祈祷": {
+      "ko": "코골이 교향곡",
+      "method": "previous_verified"
+    },
+    "うっかり劇薬": {
+      "ko": "실수로 극약처방",
+      "method": "previous_verified"
+    },
+    "うらめしにゃん進化への道 超激ムズ": {
+      "ko": "처녀귀신 냥코 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "うろたえる岩": {
+      "ko": "당황한 바위",
+      "method": "previous_verified"
+    },
+    "おしくらまん樹林": {
+      "ko": "코끼리코 수림",
+      "method": "previous_verified"
+    },
+    "おしゃべり世捨て人": {
+      "ko": "수다쟁이 수도인",
+      "method": "previous_verified"
+    },
+    "おつかれサンセット": {
+      "ko": "수고하세트",
+      "method": "previous_verified"
+    },
+    "おにゃんこカタルシス": {
+      "ko": "야옹이 카타르시스",
+      "method": "previous_verified"
+    },
+    "おぼえたての悪": {
+      "ko": "방금 외운 악",
+      "method": "previous_verified"
+    },
+    "おぼえたての愛": {
+      "ko": "막 시작한 사랑",
+      "method": "previous_verified"
+    },
+    "おもろ入り江": {
+      "ko": "가?",
+      "method": "previous_verified"
+    },
+    "おらこんな故郷出るだ": {
+      "ko": "잘 있거라 내고향",
+      "method": "previous_verified"
+    },
+    "おれおれサギ": {
+      "ko": "보이스피싱 왜가리",
+      "method": "previous_verified"
+    },
+    "お出迎え入場門": {
+      "ko": "환영의 행사풍선",
+      "method": "previous_verified"
+    },
+    "お前のマター": {
+      "ko": "언더 더 씨레벨",
+      "method": "previous_verified"
+    },
+    "お尋ね者の夜": {
+      "ko": "방문객의 밤",
+      "method": "previous_verified"
+    },
+    "お昼寝アクティビティ": {
+      "ko": "창문막힌 관람차",
+      "method": "previous_verified"
+    },
+    "お気持ちノベル": {
+      "ko": "소설 네트워크 서비스",
+      "method": "previous_verified"
+    },
+    "お魚地獄 超激ムズ": {
+      "ko": "활어회 초고난도",
+      "method": "previous_verified"
+    },
+    "かすかな晩鐘": {
+      "ko": "희미한 만종",
+      "method": "previous_verified"
+    },
+    "かたぬき遺跡": {
+      "ko": "달고나 유적",
+      "method": "previous_verified"
+    },
+    "かわいい壁画": {
+      "ko": "귀여운 벽화",
+      "method": "previous_verified"
+    },
+    "がっかり用心棒": {
+      "ko": "말라깽이 보디가드",
+      "method": "previous_verified"
+    },
+    "がらんどうの岩肌": {
+      "ko": "텅 빈 바위",
+      "method": "previous_verified"
+    },
+    "きちんとキッチン": {
+      "ko": "깨끗한 주방",
+      "method": "previous_verified"
+    },
+    "きなこ墓地": {
+      "ko": "착한이의 묘지",
+      "method": "previous_verified"
+    },
+    "くりくりくぼみ": {
+      "ko": "동글동글 구덩이",
+      "method": "previous_verified"
+    },
+    "ぐるぐる自動車道": {
+      "ko": "구굴구굴 개구리",
+      "method": "previous_verified"
+    },
+    "げろげろ沼": {
+      "ko": "개굴개굴 늪",
+      "method": "previous_verified"
+    },
+    "こぢんまり故人": {
+      "ko": "아담한 고인",
+      "method": "previous_verified"
+    },
+    "こっくり散歩道": {
+      "ko": "얼음땡 산책로",
+      "method": "previous_verified"
+    },
+    "ごめんね": {
+      "ko": "미안해",
+      "method": "previous_verified"
+    },
+    "ごろ寝廊下": {
+      "ko": "복도에서 기절",
+      "method": "previous_verified"
+    },
+    "さすらいのホラガイ": {
+      "ko": "정처없는 소라고둥",
+      "method": "previous_verified"
+    },
+    "さすらいの口笛": {
+      "ko": "정처없는 휘파람",
+      "method": "previous_verified"
+    },
+    "さむらい進化への道 超激ムズ": {
+      "ko": "무사 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "しもやけパーキングエリア": {
+      "ko": "시베리아 주차장",
+      "method": "previous_verified"
+    },
+    "すべての世界が終わる": {
+      "ko": "모든 세계의 끝",
+      "method": "previous_verified"
+    },
+    "せめてネコらしく": {
+      "ko": "적어도 고양이답게",
+      "method": "previous_verified"
+    },
+    "そよかぜの歌声": {
+      "ko": "산들바람의 노래",
+      "method": "previous_verified"
+    },
+    "たそがれに燃える丘": {
+      "ko": "황혼에 불타는 언덕",
+      "method": "previous_verified"
+    },
+    "ちぐはぐタイポグラフィ": {
+      "ko": "뒤죽박죽 타이포그래피",
+      "method": "previous_verified"
+    },
+    "ちびウシネコ進化への道 極ムズ": {
+      "ko": "꼬맹이 황소 고양이 진화로의 길 극난도",
+      "method": "previous_verified"
+    },
+    "ちびキモネコ進化への道 極ムズ": {
+      "ko": "꼬맹이 징글 고양이 진화로의 길 극난도",
+      "method": "previous_verified"
+    },
+    "ちびタンクネコ進化への道 極ムズ": {
+      "ko": "꼬맹이 탱크 고양이 진화로의 길 극난도",
+      "method": "previous_verified"
+    },
+    "ちびネコトカゲ進化への道 極ムズ": {
+      "ko": "꼬맹이 고양이 도마뱀 진화로의 길 극난도",
+      "method": "previous_verified"
+    },
+    "ちびネコノトリ進化への道 極ムズ": {
+      "ko": "꼬맹이 고양이 새 진화로의 길 극난도",
+      "method": "previous_verified"
+    },
+    "ちびネコフィッシュ進化への道 極ムズ": {
+      "ko": "꼬맹이 고양이 피쉬 진화로의 길 극난도",
+      "method": "previous_verified"
+    },
+    "ちびネコ進化への道 極ムズ": {
+      "ko": "꼬맹이 고양이 진화로의 길 극난도",
+      "method": "previous_verified"
+    },
+    "ちびバトルネコ進化への道 極ムズ": {
+      "ko": "꼬맹이 배틀 고양이 진화로의 길 극난도",
+      "method": "previous_verified"
+    },
+    "ちび巨神ネコ進化への道 極ムズ": {
+      "ko": "꼬맹이 거신 고양이 진화로의 길 극난도",
+      "method": "previous_verified"
+    },
+    "でっぷりミイラ": {
+      "ko": "토실토실 미라",
+      "method": "previous_verified"
+    },
+    "とれたて干物市": {
+      "ko": "싱싱한 수산시장",
+      "method": "previous_verified"
+    },
+    "とろーりマグマ": {
+      "ko": "걸쭉한 마그마",
+      "method": "previous_verified"
+    },
+    "どうなっとん堀": {
+      "ko": "가가 가가가?",
+      "method": "previous_verified"
+    },
+    "なぎさの猛攻": {
+      "ko": "바닷가 맹공격",
+      "method": "previous_verified"
+    },
+    "ならず者の黄昏": {
+      "ko": "황혼의 불량배",
+      "method": "previous_verified"
+    },
+    "なるはやエブリデー": {
+      "ko": "세커티와 밀크티",
+      "method": "previous_verified"
+    },
+    "なんちゃって海賊": {
+      "ko": "해적놀이",
+      "method": "previous_verified"
+    },
+    "にらめっ湖のほとり": {
+      "ko": "묵찌빠 호숫가",
+      "method": "previous_verified"
+    },
+    "ぬかるみ塹壕": {
+      "ko": "흙탕물 참호",
+      "method": "previous_verified"
+    },
+    "ぬくもり対向車線": {
+      "ko": "반대편 차의 온기",
+      "method": "previous_verified"
+    },
+    "ねこの証": {
+      "ko": "고양이의 증거",
+      "method": "previous_verified"
+    },
+    "ねこ裁判": {
+      "ko": "고양이 재판",
+      "method": "previous_verified"
+    },
+    "はじまりの世界": {
+      "ko": "시작의 세계",
+      "method": "previous_verified"
+    },
+    "はじまりへ続く足跡": {
+      "ko": "시작으로 이어지는 발자국",
+      "method": "previous_verified"
+    },
+    "はらわたの史料室": {
+      "ko": "세븐 센스",
+      "method": "previous_verified"
+    },
+    "はりぼて摩天楼": {
+      "ko": "페이퍼 빌딩",
+      "method": "previous_verified"
+    },
+    "ばたり庵": {
+      "ko": "미션임파스타",
+      "method": "previous_verified"
+    },
+    "ひとふり300ヤード": {
+      "ko": "날갯짓 한 번에 300야드",
+      "method": "previous_verified"
+    },
+    "ひなにゃんこ進化への道 超激ムズ": {
+      "ko": "냥코 부부 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "ひんやりチョコ霊廟": {
+      "ko": "마지막 대사당",
+      "method": "previous_verified"
+    },
+    "ふかひれ出没海域": {
+      "ko": "샥스핀 출몰 해역",
+      "method": "previous_verified"
+    },
+    "ふわふわ暗黒兵器": {
+      "ko": "푹신푹신 암흑 병기",
+      "method": "previous_verified"
+    },
+    "ぶっとび地雷原": {
+      "ko": "날아라 지뢰원",
+      "method": "previous_verified"
+    },
+    "ぶつけゴマ丘陵": {
+      "ko": "팽이 언덕",
+      "method": "previous_verified"
+    },
+    "ぷらっとオーシャン": {
+      "ko": "블루오션",
+      "method": "previous_verified"
+    },
+    "ぷりぷりくぼみ": {
+      "ko": "바디 라인",
+      "method": "previous_verified"
+    },
+    "ぷるるん広場": {
+      "ko": "탱글탱글 광장",
+      "method": "previous_verified"
+    },
+    "へんな讃美歌": {
+      "ko": "이상한 멜로디",
+      "method": "previous_verified"
+    },
+    "べろべろ沼": {
+      "ko": "할짝할짝 늪",
+      "method": "previous_verified"
+    },
+    "ぺこぺこパレード": {
+      "ko": "굽신굽신 퍼레이드",
+      "method": "previous_verified"
+    },
+    "ほがらか邪教信者": {
+      "ko": "사교적인 사교도",
+      "method": "previous_verified"
+    },
+    "ほっこり間欠泉": {
+      "ko": "뜨끈뜨끈 간헐천",
+      "method": "previous_verified"
+    },
+    "ほんのり黒い家": {
+      "ko": "극성",
+      "method": "previous_verified"
+    },
+    "ぼちぼち都心": {
+      "ko": "가가 가가 가가가?",
+      "method": "previous_verified"
+    },
+    "ぽっちゃり性善説": {
+      "ko": "뚱보 성선설",
+      "method": "previous_verified"
+    },
+    "ぽろり鉱石": {
+      "ko": "사랑의 광석",
+      "method": "previous_verified"
+    },
+    "まごころをネコに 超極ムズ": {
+      "ko": "진심을 고양이에게 초극난도",
+      "method": "previous_verified"
+    },
+    "また会えるよ 超極ムズ": {
+      "ko": "다시 만날거야 초극난도",
+      "method": "previous_verified"
+    },
+    "まちぶせ風呂": {
+      "ko": "욕실에 잠복",
+      "method": "previous_verified"
+    },
+    "まったり地底湖": {
+      "ko": "느긋한 땅속 호수",
+      "method": "previous_verified"
+    },
+    "まる出し宝物庫": {
+      "ko": "보물창고 무료개방",
+      "method": "previous_verified"
+    },
+    "むっちり隠れ港": {
+      "ko": "포동포동",
+      "method": "previous_verified"
+    },
+    "めんこい大瀑布": {
+      "ko": "딱지 대폭포",
+      "method": "previous_verified"
+    },
+    "もう陸には帰れない": {
+      "ko": "그리운 육지",
+      "method": "previous_verified"
+    },
+    "もっさり坑道": {
+      "ko": "비죽비죽 갱도",
+      "method": "previous_verified"
+    },
+    "やわらかいワナ": {
+      "ko": "푹신푹신 함정",
+      "method": "previous_verified"
+    },
+    "ゆるふわフィックス": {
+      "ko": "아삽으로 삽질",
+      "method": "previous_verified"
+    },
+    "よき生への執着": {
+      "ko": "올바른 삶에 대한 집착",
+      "method": "previous_verified"
+    },
+    "よこしまな聖職者": {
+      "ko": "음흉한 성직자",
+      "method": "previous_verified"
+    },
+    "よたもの遊泳大会": {
+      "ko": "양아치 수영대회",
+      "method": "previous_verified"
+    },
+    "らくだ岸壁": {
+      "ko": "낙타 안벽",
+      "method": "previous_verified"
+    },
+    "らせん状リング": {
+      "ko": "스파이럴 링",
+      "method": "previous_verified"
+    },
+    "りんりん防風林": {
+      "ko": "린링 방풍림",
+      "method": "previous_verified"
+    },
+    "ろ過された真心": {
+      "ko": "여과된 진심",
+      "method": "previous_verified"
+    },
+    "わかめ緑地キャンプ場": {
+      "ko": "미역 그린 캠프장",
+      "method": "previous_verified"
+    },
+    "アガペーの檻": {
+      "ko": "아가페의 우리",
+      "method": "previous_verified"
+    },
+    "アキレスの剣": {
+      "ko": "아킬레스 검",
+      "method": "previous_verified"
+    },
+    "アスカが乗ってるんだよ！ 激ムズ": {
+      "ko": "아스카가 타고 있다고요! 고난도",
+      "method": "previous_verified"
+    },
+    "アットホーム恐怖政治": {
+      "ko": "집에서의 공포정치",
+      "method": "previous_verified"
+    },
+    "アヒージョ高原": {
+      "ko": "아히죠 고원",
+      "method": "previous_verified"
+    },
+    "アフロディテの門": {
+      "ko": "아프로디테의 문",
+      "method": "previous_verified"
+    },
+    "アベン・ジャズ喫茶": {
+      "ko": "어벤져스테이크",
+      "method": "previous_verified"
+    },
+    "アポカリプス 超極ムズ": {
+      "ko": "아포칼립스 초극난도",
+      "method": "previous_verified"
+    },
+    "アマエビフロンティア": {
+      "ko": "단새우 프런티어",
+      "method": "previous_verified"
+    },
+    "アレソレ議事堂": {
+      "ko": "아무말 대잔치 의사당",
+      "method": "previous_verified"
+    },
+    "アンコールS.W.A.T": {
+      "ko": "앙코르 S.W.A.T",
+      "method": "previous_verified"
+    },
+    "アンダーワールド": {
+      "ko": "언더월드",
+      "method": "previous_verified"
+    },
+    "アンニン峠": {
+      "ko": "안닌고개",
+      "method": "previous_verified"
+    },
+    "イカスミュージアム": {
+      "ko": "가자미술관",
+      "method": "previous_verified"
+    },
+    "イカス岬": {
+      "ko": "오징어 곶",
+      "method": "previous_verified"
+    },
+    "イカロスの本能": {
+      "ko": "이카로스의 본능",
+      "method": "previous_verified"
+    },
+    "イクラ岩窟": {
+      "ko": "연어알 바위굴",
+      "method": "previous_verified"
+    },
+    "イグサ塔": {
+      "ko": "등심초탑",
+      "method": "previous_verified"
+    },
+    "イソフラボン洞窟": {
+      "ko": "이소플라본 동굴",
+      "method": "previous_verified"
+    },
+    "イチタスニハ山": {
+      "ko": "일더하기이 삼림",
+      "method": "previous_verified"
+    },
+    "イベリコ平野": {
+      "ko": "흑돼지평야",
+      "method": "previous_verified"
+    },
+    "イモ洗いプール": {
+      "ko": "개미떼 수영장",
+      "method": "previous_verified"
+    },
+    "イロニーの森": {
+      "ko": "아이러니한 숲",
+      "method": "previous_verified"
+    },
+    "イワロック岩礁": {
+      "ko": "이와록 암초",
+      "method": "previous_verified"
+    },
+    "インスタント写真館": {
+      "ko": "인스턴트 사진관",
+      "method": "previous_verified"
+    },
+    "インテリゲンチャ": {
+      "ko": "인텔리겐치아",
+      "method": "previous_verified"
+    },
+    "インフィニ峠": {
+      "ko": "무한대 고개",
+      "method": "previous_verified"
+    },
+    "イン・デペンデンス亭": {
+      "ko": "수타우동 워즈",
+      "method": "previous_verified"
+    },
+    "ウェアラブル一軒家": {
+      "ko": "웨어러블 전원주택",
+      "method": "previous_verified"
+    },
+    "ウキウキ乾季": {
+      "ko": "두근두근 건기",
+      "method": "previous_verified"
+    },
+    "ウツボボ海底火山": {
+      "ko": "곰치치 해저화산",
+      "method": "previous_verified"
+    },
+    "ウニデーモンスタジオ": {
+      "ko": "데몬 스튜디오",
+      "method": "previous_verified"
+    },
+    "ウニバーサンスタジオ": {
+      "ko": "우니버설 스튜디오로",
+      "method": "previous_verified"
+    },
+    "ウニ街道": {
+      "ko": "성게 가도",
+      "method": "previous_verified"
+    },
+    "ウミネコ湾岸": {
+      "ko": "괭이갈매기 연안",
+      "method": "previous_verified"
+    },
+    "エキストラ原住民": {
+      "ko": "원주민 아르바이트",
+      "method": "previous_verified"
+    },
+    "エターナル古森林": {
+      "ko": "이터널 고삼림",
+      "method": "previous_verified"
+    },
+    "エナジー奴隷": {
+      "ko": "에너지 노예",
+      "method": "previous_verified"
+    },
+    "エレクトロサファリパーク": {
+      "ko": "일렉트로 사파리 파크",
+      "method": "previous_verified"
+    },
+    "エロスの街道": {
+      "ko": "에로스 가도",
+      "method": "previous_verified"
+    },
+    "エンガワの森": {
+      "ko": "지느러미 숲",
+      "method": "previous_verified"
+    },
+    "エントロピートロピカル": {
+      "ko": "엔트로피 트로피컬",
+      "method": "previous_verified"
+    },
+    "オイラーノ群島": {
+      "ko": "오일러 제도",
+      "method": "previous_verified"
+    },
+    "オウム貝の墓場": {
+      "ko": "앵무조개 무덤",
+      "method": "previous_verified"
+    },
+    "オシャレＶＩＰルーム": {
+      "ko": "멋쟁이 VIP룸",
+      "method": "previous_verified"
+    },
+    "オマエ・ナンヤ島": {
+      "ko": "가가가?",
+      "method": "previous_verified"
+    },
+    "オマージュとパロディ": {
+      "ko": "오마주와 패러디",
+      "method": "previous_verified"
+    },
+    "オートウォーク迷路": {
+      "ko": "무빙워크 미로",
+      "method": "previous_verified"
+    },
+    "オートマチック危機回避": {
+      "ko": "위기회피 자동화",
+      "method": "previous_verified"
+    },
+    "カウガール監獄": {
+      "ko": "카우걸 감옥",
+      "method": "previous_verified"
+    },
+    "カウボーイ天国": {
+      "ko": "카우보이 천국",
+      "method": "previous_verified"
+    },
+    "カオスラグーン": {
+      "ko": "카오스 라군",
+      "method": "previous_verified"
+    },
+    "カテキン丘陵": {
+      "ko": "카테킨 구릉",
+      "method": "previous_verified"
+    },
+    "カニミソ草原": {
+      "ko": "게장 초원",
+      "method": "previous_verified"
+    },
+    "カマトロ防波堤": {
+      "ko": "참치뱃살 방파제",
+      "method": "previous_verified"
+    },
+    "カモメ海岸": {
+      "ko": "갈매기 해안",
+      "method": "previous_verified"
+    },
+    "カラフルカクテル": {
+      "ko": "컬러풀 칵테일",
+      "method": "previous_verified"
+    },
+    "カルパッチョ沖": {
+      "ko": "카르파쵸 바다",
+      "method": "previous_verified"
+    },
+    "カレー彗星": {
+      "ko": "카레 혜성",
+      "method": "previous_verified"
+    },
+    "カンフーG進化への道 超激ムズ": {
+      "ko": "쿵후 냥코G 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "カンフー進化への道 超激ムズ": {
+      "ko": "쿵후 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "ガイアの夜明け": {
+      "ko": "가이아의 새벽",
+      "method": "previous_verified"
+    },
+    "ガスパチョ高原": {
+      "ko": "가스파초 고원",
+      "method": "previous_verified"
+    },
+    "ガス吸う鳥": {
+      "ko": "강제 가스 흡입",
+      "method": "previous_verified"
+    },
+    "ガチガチ暗黒兵器": {
+      "ko": "울끈불끈 암흑 병기",
+      "method": "previous_verified"
+    },
+    "ガッツリライフツリー": {
+      "ko": "테크트리 오브 라이프",
+      "method": "previous_verified"
+    },
+    "ガラスの靴下": {
+      "ko": "유리 양말",
+      "method": "previous_verified"
+    },
+    "ガリガリウォール": {
+      "ko": "긁적긁적 월",
+      "method": "previous_verified"
+    },
+    "ガンダーラ休憩所": {
+      "ko": "간다라의 휴게소",
+      "method": "previous_verified"
+    },
+    "ガンマンの黄昏": {
+      "ko": "건맨의 석양",
+      "method": "previous_verified"
+    },
+    "キノコ崖": {
+      "ko": "버섯 벼랑",
+      "method": "previous_verified"
+    },
+    "キモフェス 超激ムズ": {
+      "ko": "징글 축제 초고난도",
+      "method": "previous_verified"
+    },
+    "キャットミューティレーション": {
+      "ko": "캣 뮤틸레이션",
+      "method": "previous_verified"
+    },
+    "キリバンの番人": {
+      "ko": "모스와 파수꾼",
+      "method": "previous_verified"
+    },
+    "キングオブワンコ 超極ムズ": {
+      "ko": "킹 오브 멍뭉이 초극난도",
+      "method": "previous_verified"
+    },
+    "クアラルン池": {
+      "ko": "풋팟퐁커리 VS 팟타이",
+      "method": "previous_verified"
+    },
+    "クスクスコミックス": {
+      "ko": "만화가 너무 많아",
+      "method": "previous_verified"
+    },
+    "クリムゾン広場": {
+      "ko": "크림슨 광장",
+      "method": "previous_verified"
+    },
+    "クローン農夫": {
+      "ko": "클론 농부",
+      "method": "previous_verified"
+    },
+    "クーゲルシュライバー": {
+      "ko": "쿠겔슈라이버",
+      "method": "previous_verified"
+    },
+    "グリ高原": {
+      "ko": "닭싸움 고원",
+      "method": "previous_verified"
+    },
+    "グレートバリアフリー": {
+      "ko": "그레이트 배리어 프리",
+      "method": "previous_verified"
+    },
+    "グレートプレーリー港": {
+      "ko": "그레이트 프레리 항구",
+      "method": "previous_verified"
+    },
+    "グロッキークロッキー": {
+      "ko": "크롭 티 크로키",
+      "method": "previous_verified"
+    },
+    "グースカツンツン大爆発": {
+      "ko": "뚱구스카 대폭발",
+      "method": "previous_verified"
+    },
+    "ケミカル長寿の湯": {
+      "ko": "케미컬 장수탕",
+      "method": "previous_verified"
+    },
+    "ケン・ケンパ峰": {
+      "ko": "쎄쎄쎄 봉우리",
+      "method": "previous_verified"
+    },
+    "ゲシュタルト、崩壊": {
+      "ko": "게슈탈트, 붕괴",
+      "method": "previous_verified"
+    },
+    "ゲッソリ性悪説": {
+      "ko": "홀쭉한 성악설",
+      "method": "previous_verified"
+    },
+    "ゲノムバナナ狩り": {
+      "ko": "게놈 바나나 서리",
+      "method": "previous_verified"
+    },
+    "ゲノム盆踊り": {
+      "ko": "게놈 강강술래",
+      "method": "previous_verified"
+    },
+    "コアラ昼寝地帯": {
+      "ko": "코알라 낮잠 지대",
+      "method": "previous_verified"
+    },
+    "コオロギイデオロギー": {
+      "ko": "귀뚜라미 이데올로기",
+      "method": "previous_verified"
+    },
+    "コサ民遺跡": {
+      "ko": "코사민 유적",
+      "method": "previous_verified"
+    },
+    "コラージュ畑": {
+      "ko": "콜라 주말농장",
+      "method": "previous_verified"
+    },
+    "コンクリートオーシャン": {
+      "ko": "콘크리트 오션",
+      "method": "previous_verified"
+    },
+    "コンドロイチン砂丘": {
+      "ko": "콘드로이틴 사구",
+      "method": "previous_verified"
+    },
+    "コンプライアンス地獄": {
+      "ko": "사회적 책임 지옥",
+      "method": "previous_verified"
+    },
+    "コーラスラップバトル": {
+      "ko": "코러스 랩 배틀",
+      "method": "previous_verified"
+    },
+    "コーラルサンゴ礁": {
+      "ko": "코랄 산호초",
+      "method": "previous_verified"
+    },
+    "ゴダイゴ峠": {
+      "ko": "황제의 야옹이",
+      "method": "previous_verified"
+    },
+    "ゴールデン街": {
+      "ko": "심야식당",
+      "method": "previous_verified"
+    },
+    "サイドチェス島": {
+      "ko": "조상님 강림!",
+      "method": "previous_verified"
+    },
+    "サインコサイン炭鉱": {
+      "ko": "사인코사인 탄광",
+      "method": "previous_verified"
+    },
+    "サザナミ・アイランド": {
+      "ko": "잔물결 아일랜드",
+      "method": "previous_verified"
+    },
+    "サタンオールスターズ": {
+      "ko": "사탄 올 스타즈",
+      "method": "previous_verified"
+    },
+    "サングリア川": {
+      "ko": "샹그리아 강",
+      "method": "previous_verified"
+    },
+    "サンゴ住宅団地": {
+      "ko": "산호 아파트 단지",
+      "method": "previous_verified"
+    },
+    "サンシャイン洞窟": {
+      "ko": "선샤인 동굴",
+      "method": "previous_verified"
+    },
+    "ザクザクッキー山脈": {
+      "ko": "바삭 쿠키 산맥",
+      "method": "previous_verified"
+    },
+    "シャバの王者": {
+      "ko": "자유의 왕자",
+      "method": "previous_verified"
+    },
+    "シュノキ原野": {
+      "ko": "종 위기 원림",
+      "method": "previous_verified"
+    },
+    "シランケ洞": {
+      "ko": "가가 가가, 가가 가가?",
+      "method": "previous_verified"
+    },
+    "シロマグロ海岸": {
+      "ko": "흰참치 해안",
+      "method": "previous_verified"
+    },
+    "ジャン・グール": {
+      "ko": "정 투더 글",
+      "method": "previous_verified"
+    },
+    "スカート進化への道 超激ムズ": {
+      "ko": "스커트 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "スコップ一つに賭す命": {
+      "ko": "삽 하나에 거는 목숨",
+      "method": "previous_verified"
+    },
+    "スタンバイ民宿": {
+      "ko": "겨울왕국밥",
+      "method": "previous_verified"
+    },
+    "スナイパージャングル": {
+      "ko": "스나이퍼 정글",
+      "method": "previous_verified"
+    },
+    "スパイより愛を込めて": {
+      "ko": "내사랑 스파이",
+      "method": "previous_verified"
+    },
+    "スポイトで測る愛": {
+      "ko": "스포이드로 재는 연심",
+      "method": "previous_verified"
+    },
+    "スモウ進化への道 超激ムズ": {
+      "ko": "스모 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "スリルの代償": {
+      "ko": "스릴의 대가",
+      "method": "previous_verified"
+    },
+    "スリルの談笑": {
+      "ko": "스릴의 농담",
+      "method": "previous_verified"
+    },
+    "スーパーボルケーノ": {
+      "ko": "슈퍼 볼케이노",
+      "method": "previous_verified"
+    },
+    "セクシースキャンダル": {
+      "ko": "섹시스타와 스캔들",
+      "method": "previous_verified"
+    },
+    "セクシー鍾乳洞": {
+      "ko": "섹시 종유동",
+      "method": "previous_verified"
+    },
+    "セサ民遺跡": {
+      "ko": "세사민 유적",
+      "method": "previous_verified"
+    },
+    "セレブな玄関": {
+      "ko": "억만장자의 현관",
+      "method": "previous_verified"
+    },
+    "ゼウスの祭壇": {
+      "ko": "제우스의 제단",
+      "method": "previous_verified"
+    },
+    "ゼロの地平線": {
+      "ko": "제로의 지평선",
+      "method": "previous_verified"
+    },
+    "ゾンビ進化への道 超激ムズ": {
+      "ko": "좀비 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "タイタ肉屋": {
+      "ko": "해리포차",
+      "method": "previous_verified"
+    },
+    "タイマースター塔": {
+      "ko": "타임스 탑",
+      "method": "previous_verified"
+    },
+    "タウロス街道": {
+      "ko": "타우로스 고속도로",
+      "method": "previous_verified"
+    },
+    "タクヤとユキ進化への道 超激ムズ": {
+      "ko": "타쿠야와 유키 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "タケノコ海岸": {
+      "ko": "죽순 해안",
+      "method": "previous_verified"
+    },
+    "タツノコ浜": {
+      "ko": "해마 해변",
+      "method": "previous_verified"
+    },
+    "タパス砂漠": {
+      "ko": "타파스 사막",
+      "method": "previous_verified"
+    },
+    "ダイヤルアップ回廊": {
+      "ko": "다이얼 업 회로",
+      "method": "previous_verified"
+    },
+    "ダダ洩れ海底トンネル": {
+      "ko": "하이패스 해저 터널",
+      "method": "previous_verified"
+    },
+    "ダンベルイヤリング": {
+      "ko": "덤벨 귀걸이",
+      "method": "previous_verified"
+    },
+    "ダンボール回廊": {
+      "ko": "박스 회랑",
+      "method": "previous_verified"
+    },
+    "ダークオクトパスの海": {
+      "ko": "문어의 바다",
+      "method": "previous_verified"
+    },
+    "チクタク住宅地区": {
+      "ko": "째깍째깍 주거지구",
+      "method": "previous_verified"
+    },
+    "チクチク高原": {
+      "ko": "따끔따끔 고원",
+      "method": "previous_verified"
+    },
+    "チャウチャウチャ運河": {
+      "ko": "가가 가가?",
+      "method": "previous_verified"
+    },
+    "チュパチュパカブラ遭遇": {
+      "ko": "추파추파카브라",
+      "method": "previous_verified"
+    },
+    "チュロス・ナイト": {
+      "ko": "츄러스 나이트",
+      "method": "previous_verified"
+    },
+    "ティティ進化への道 超激ムズ": {
+      "ko": "티티 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "ティラミス断崖": {
+      "ko": "티라미수 단층",
+      "method": "previous_verified"
+    },
+    "ティロ・フィナーレ！": {
+      "ko": "티로 피날레!",
+      "method": "previous_verified"
+    },
+    "テンガロン山": {
+      "ko": "카우보이의 산",
+      "method": "previous_verified"
+    },
+    "テングサ島": {
+      "ko": "우뭇가사리 섬",
+      "method": "previous_verified"
+    },
+    "ディクショナリー地所": {
+      "ko": "식사 전 사전 정독",
+      "method": "previous_verified"
+    },
+    "ディープシー決死隊": {
+      "ko": "해저 2000m 결사대",
+      "method": "previous_verified"
+    },
+    "デカ番台": {
+      "ko": "목욕탕 카운터",
+      "method": "previous_verified"
+    },
+    "デスモヒカン 極ムズ": {
+      "ko": "데스모히칸 극난도",
+      "method": "previous_verified"
+    },
+    "デス・マーチ 超極ムズ": {
+      "ko": "죽음・행진곡 초극난도",
+      "method": "previous_verified"
+    },
+    "デッドリボルバー渓谷": {
+      "ko": "데드리볼버 계곡",
+      "method": "previous_verified"
+    },
+    "デビストリングス 超極ムズ": {
+      "ko": "데비스트링스 초극난도",
+      "method": "previous_verified"
+    },
+    "デンジロー海原": {
+      "ko": "위험한 대해",
+      "method": "previous_verified"
+    },
+    "デーモンイレイザー 超極ムズ": {
+      "ko": "데몬 이레이저 초극난도",
+      "method": "previous_verified"
+    },
+    "トナカイ進化への道 超激ムズ": {
+      "ko": "순록피쉬 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "トビコ原生林": {
+      "ko": "날치알 원시림",
+      "method": "previous_verified"
+    },
+    "トリトンの洞穴": {
+      "ko": "트리톤의 동굴",
+      "method": "previous_verified"
+    },
+    "トンガリ湖畔": {
+      "ko": "쫀득쫀득 호수",
+      "method": "previous_verified"
+    },
+    "トータル自然淘汰": {
+      "ko": "자연 선택 선탁",
+      "method": "previous_verified"
+    },
+    "ドキドキ穴": {
+      "ko": "두근두근 구멍",
+      "method": "previous_verified"
+    },
+    "ドジョウ破り": {
+      "ko": "미꾸리 깨기",
+      "method": "previous_verified"
+    },
+    "ドッキングジェノサイダー": {
+      "ko": "도킹 제노사이더",
+      "method": "previous_verified"
+    },
+    "ドラゴンダイナー": {
+      "ko": "드래곤돌라 투어",
+      "method": "previous_verified"
+    },
+    "ド近眼の暗器使い": {
+      "ko": "근시안의 암기꾼",
+      "method": "previous_verified"
+    },
+    "ナンセンス細胞変異": {
+      "ko": "넌센스 세포변이",
+      "method": "previous_verified"
+    },
+    "ナンバーWAN 超極ムズ": {
+      "ko": "No.WAN 초극난도",
+      "method": "previous_verified"
+    },
+    "ニャンダルシア": {
+      "ko": "야옹달루시아",
+      "method": "previous_verified"
+    },
+    "ニャンダルメシアン": {
+      "ko": "야옹달마시안",
+      "method": "previous_verified"
+    },
+    "ニュートリノ異雪原": {
+      "ko": "뉴트리노 설원",
+      "method": "previous_verified"
+    },
+    "ネギトロ平野": {
+      "ko": "참치 평야",
+      "method": "previous_verified"
+    },
+    "ネコのおへそ": {
+      "ko": "에어즈 냥",
+      "method": "previous_verified"
+    },
+    "ネコエッグ進化への道 超激ムズ": {
+      "ko": "고양이 에그 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "ネコハザード 極ムズ": {
+      "ko": "고양이 하자드 극난도",
+      "method": "previous_verified"
+    },
+    "ネコフラワー進化への道 初級": {
+      "ko": "고양이 플라워 진화로의 길 초급",
+      "method": "previous_verified"
+    },
+    "ノープロブレム帰港": {
+      "ko": "안전하게 귀항",
+      "method": "previous_verified"
+    },
+    "ノーマル・アクティビティ": {
+      "ko": "고양이 전기톱 연쇄침략사건",
+      "method": "previous_verified"
+    },
+    "ハイテク昆布漁": {
+      "ko": "첨단 다시마 채취",
+      "method": "previous_verified"
+    },
+    "ハイパーバーサーカー 超極ムズ": {
+      "ko": "하이퍼 버서커 초극난도",
+      "method": "previous_verified"
+    },
+    "ハデスの迷宮": {
+      "ko": "하데스의 미궁",
+      "method": "previous_verified"
+    },
+    "ハニートラップ 極ムズ": {
+      "ko": "허니 트랩 극난도",
+      "method": "previous_verified"
+    },
+    "ハニートリップ 極ムズ": {
+      "ko": "허니 트립 극난도",
+      "method": "previous_verified"
+    },
+    "ハリートンネル": {
+      "ko": "해리 터널",
+      "method": "previous_verified"
+    },
+    "ハングリーフォレスト": {
+      "ko": "헝그리 포레스트",
+      "method": "previous_verified"
+    },
+    "ハンチング山": {
+      "ko": "헌팅 산",
+      "method": "previous_verified"
+    },
+    "ハートフル生体兵器": {
+      "ko": "훈훈한 생체병기",
+      "method": "previous_verified"
+    },
+    "バクスイ娘 極ムズ": {
+      "ko": "잠만보 소녀 극난도",
+      "method": "previous_verified"
+    },
+    "バクダン娘 極ムズ": {
+      "ko": "폭탄 소녀 극난도",
+      "method": "previous_verified"
+    },
+    "バスルーム": {
+      "ko": "욕실",
+      "method": "previous_verified"
+    },
+    "バタバタ大黒柱": {
+      "ko": "분주한 대들보",
+      "method": "previous_verified"
+    },
+    "バトル海の決戦": {
+      "ko": "냥코해전",
+      "method": "previous_verified"
+    },
+    "バブフェッショナル 超極ムズ": {
+      "ko": "옹아리스트 초극난도",
+      "method": "previous_verified"
+    },
+    "バブリーヒルズ白書": {
+      "ko": "비버리힐즈 백서",
+      "method": "previous_verified"
+    },
+    "バブリー感ドリーム": {
+      "ko": "메아리칸 드림",
+      "method": "previous_verified"
+    },
+    "バラバラチキンレース": {
+      "ko": "담력 테스트",
+      "method": "previous_verified"
+    },
+    "バラバラバラン草原": {
+      "ko": "천사채소밭",
+      "method": "previous_verified"
+    },
+    "バリバリ柱": {
+      "ko": "갉작갉작 기둥",
+      "method": "previous_verified"
+    },
+    "バルク大地": {
+      "ko": "근육 대지",
+      "method": "previous_verified"
+    },
+    "パイナップル商事": {
+      "ko": "파인애플 주식회사",
+      "method": "previous_verified"
+    },
+    "パエリア草原": {
+      "ko": "빠에야 초원",
+      "method": "previous_verified"
+    },
+    "パスタ砂丘": {
+      "ko": "파스타 사구",
+      "method": "previous_verified"
+    },
+    "パチパチワンダーランド": {
+      "ko": "팝핑캔디 원더랜드",
+      "method": "previous_verified"
+    },
+    "パパラッチフィーバー": {
+      "ko": "파파라치 천국",
+      "method": "previous_verified"
+    },
+    "パルカッチョ海溝": {
+      "ko": "파르카쵸 해구",
+      "method": "previous_verified"
+    },
+    "パンツ進化への道 超激ムズ": {
+      "ko": "팬티 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "ヒアルロン山": {
+      "ko": "히알루론산",
+      "method": "previous_verified"
+    },
+    "ビクビク高原": {
+      "ko": "무시무시 언덕",
+      "method": "previous_verified"
+    },
+    "ビッグバーガーガーデン": {
+      "ko": "빅버거 가든",
+      "method": "previous_verified"
+    },
+    "ビッチビチ漁場": {
+      "ko": "비치비치 어장",
+      "method": "previous_verified"
+    },
+    "ビーチパラソル畑": {
+      "ko": "비치파라솔 밭",
+      "method": "previous_verified"
+    },
+    "ピタゴラ水源": {
+      "ko": "피타고라 수평선",
+      "method": "previous_verified"
+    },
+    "ピチピチ漁場": {
+      "ko": "싱싱 어장",
+      "method": "previous_verified"
+    },
+    "ピラフ大草原": {
+      "ko": "필라프 대초원",
+      "method": "previous_verified"
+    },
+    "ピリオド大渓谷": {
+      "ko": "마침표 대계곡",
+      "method": "previous_verified"
+    },
+    "ピロピロ笛水草": {
+      "ko": "풀피리 수초",
+      "method": "previous_verified"
+    },
+    "ファイナルタワー": {
+      "ko": "파이널 타워",
+      "method": "previous_verified"
+    },
+    "フィナーレ神殿": {
+      "ko": "피날레 신전",
+      "method": "previous_verified"
+    },
+    "フィーバー進化への道 超激ムズ": {
+      "ko": "피버 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "フェアリーディスコ": {
+      "ko": "페어리 클럽",
+      "method": "previous_verified"
+    },
+    "フェロモン門": {
+      "ko": "페로몬 발사",
+      "method": "previous_verified"
+    },
+    "フタこぶ岩": {
+      "ko": "가슴골",
+      "method": "previous_verified"
+    },
+    "フラスコ岳": {
+      "ko": "플라스크산",
+      "method": "previous_verified"
+    },
+    "フラメン抗": {
+      "ko": "플라멩코 구멍",
+      "method": "previous_verified"
+    },
+    "フレミングT字海路": {
+      "ko": "플레밍 T자항로",
+      "method": "previous_verified"
+    },
+    "ブラウン管のインフルエンサー": {
+      "ko": "브라운관의 인플루언서",
+      "method": "previous_verified"
+    },
+    "ブラックウェーブ": {
+      "ko": "블랙 웨이브",
+      "method": "previous_verified"
+    },
+    "ブラッディ波止場": {
+      "ko": "블러디 부둣가",
+      "method": "previous_verified"
+    },
+    "プライベートないビーチ": {
+      "ko": "공용 프라이빗 비치",
+      "method": "previous_verified"
+    },
+    "プライベート熱帯雨林": {
+      "ko": "개인 전용 열대 우림",
+      "method": "previous_verified"
+    },
+    "プラス５０度の世界": {
+      "ko": "플러스 50도의 세계",
+      "method": "previous_verified"
+    },
+    "プラネタリウムラブ": {
+      "ko": "플라네타늄 러브",
+      "method": "previous_verified"
+    },
+    "プリズン・破": {
+      "ko": "프리즌 파괴",
+      "method": "previous_verified"
+    },
+    "プレハブ大聖堂": {
+      "ko": "판때기 캐슬",
+      "method": "previous_verified"
+    },
+    "プレパラートの橋": {
+      "ko": "프레파라트 다리",
+      "method": "previous_verified"
+    },
+    "プロテイン砂漠": {
+      "ko": "프로틴 디저트",
+      "method": "previous_verified"
+    },
+    "プロポリスオアシス": {
+      "ko": "프로폴리스 연못",
+      "method": "previous_verified"
+    },
+    "プロレタリアの箱": {
+      "ko": "프롤레타리아의 상자",
+      "method": "previous_verified"
+    },
+    "ヘアーサロン潮風": {
+      "ko": "바닷바람 헤어살롱",
+      "method": "previous_verified"
+    },
+    "ヘタうまキュビズム": {
+      "ko": "고수의 큐비즘",
+      "method": "previous_verified"
+    },
+    "ヘッドシェイカー 超激ムズ": {
+      "ko": "헤드뱅잉 초고난도",
+      "method": "previous_verified"
+    },
+    "ヘルズクレーター": {
+      "ko": "지옥의 크레이터",
+      "method": "previous_verified"
+    },
+    "ベニマグロ海岸": {
+      "ko": "홍참치 해안",
+      "method": "previous_verified"
+    },
+    "ベビーファースト 超極ムズ": {
+      "ko": "베이비 퍼스트 초극난도",
+      "method": "previous_verified"
+    },
+    "ベビーフェイク 超極ムズ": {
+      "ko": "베이비 페이크 초극난도",
+      "method": "previous_verified"
+    },
+    "ベンゼン畑": {
+      "ko": "벤젠 밭",
+      "method": "previous_verified"
+    },
+    "ペプチド雪原": {
+      "ko": "펩타이드 설원",
+      "method": "previous_verified"
+    },
+    "ペリカン島": {
+      "ko": "펠리컨 아일랜드",
+      "method": "previous_verified"
+    },
+    "ペルソナの芽生え": {
+      "ko": "페르소나의 시작",
+      "method": "previous_verified"
+    },
+    "ホコタテ漁場": {
+      "ko": "모순의 어장",
+      "method": "previous_verified"
+    },
+    "ホテル花鳥風月": {
+      "ko": "풍류 호텔",
+      "method": "previous_verified"
+    },
+    "ホルマリンマリーナ": {
+      "ko": "포르말린 마리나",
+      "method": "previous_verified"
+    },
+    "ホワイト・ライト・ナイト": {
+      "ko": "화이트・라이트・나이트",
+      "method": "previous_verified"
+    },
+    "ボタニカル埋葬": {
+      "ko": "보타니컬 매장",
+      "method": "previous_verified"
+    },
+    "ボッタクリにむせぶ夜": {
+      "ko": "바가지 요금에 흐느끼는 밤",
+      "method": "previous_verified"
+    },
+    "ボーンデッドアパートメント": {
+      "ko": "본데드 아파트",
+      "method": "previous_verified"
+    },
+    "ポイステ海岸": {
+      "ko": "불법투기 해안",
+      "method": "previous_verified"
+    },
+    "ポイズンチキンライス": {
+      "ko": "포이즌 치킨라이스",
+      "method": "previous_verified"
+    },
+    "ポセイドンのこしかけ": {
+      "ko": "포세이돈의 휴식",
+      "method": "previous_verified"
+    },
+    "ポッポー領土": {
+      "ko": "만주벌판",
+      "method": "previous_verified"
+    },
+    "ポテンシャルロード": {
+      "ko": "포텐셜 로드",
+      "method": "previous_verified"
+    },
+    "ポルターガイストリート": {
+      "ko": "포르타 가이스트리트",
+      "method": "previous_verified"
+    },
+    "ポンポン船の墓場": {
+      "ko": "퐁퐁배의 묘지",
+      "method": "previous_verified"
+    },
+    "マ=ガ寺院": {
+      "ko": "매진된 매거진",
+      "method": "previous_verified"
+    },
+    "マイクロ高層ビル": {
+      "ko": "마이크로 고층빌딩",
+      "method": "previous_verified"
+    },
+    "マカロニタウン": {
+      "ko": "마카로니 타운",
+      "method": "previous_verified"
+    },
+    "マグマシャフト": {
+      "ko": "마그마 샤프트",
+      "method": "previous_verified"
+    },
+    "マジカルフィジカル": {
+      "ko": "매지컬 피지컬",
+      "method": "previous_verified"
+    },
+    "マジコイ進化への道 超激ムズ": {
+      "ko": "물만난 물고기 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "マタタビの夢": {
+      "ko": "개다래나무의 꿈",
+      "method": "previous_verified"
+    },
+    "マダムスキー型UFO": {
+      "ko": "마담스키형 UFO",
+      "method": "previous_verified"
+    },
+    "マリネタウン": {
+      "ko": "마리네 타운",
+      "method": "previous_verified"
+    },
+    "マルコ・ポーロード": {
+      "ko": "마르코폴로드",
+      "method": "previous_verified"
+    },
+    "マルチテトラポッド": {
+      "ko": "멀티 테트라포드",
+      "method": "previous_verified"
+    },
+    "マーメイドのあんかけ": {
+      "ko": "인어 탕수육",
+      "method": "previous_verified"
+    },
+    "マーメイド喫茶": {
+      "ko": "머메이드 카페",
+      "method": "previous_verified"
+    },
+    "ミイラトリガーミイラ": {
+      "ko": "함양차사",
+      "method": "previous_verified"
+    },
+    "ミステリーサークル": {
+      "ko": "미스테리 서클",
+      "method": "previous_verified"
+    },
+    "ミルキートンネル": {
+      "ko": "밀키 터널",
+      "method": "previous_verified"
+    },
+    "ムキフェス 極ムズ": {
+      "ko": "불끈 페스티벌 극난도",
+      "method": "previous_verified"
+    },
+    "ムツゴロウパーク": {
+      "ko": "짱뚱어 파크",
+      "method": "previous_verified"
+    },
+    "ムール街の悪夢": {
+      "ko": "13일 금요일의 악몽",
+      "method": "previous_verified"
+    },
+    "メタボリック症候群": {
+      "ko": "메타볼릭 신드롬",
+      "method": "previous_verified"
+    },
+    "メタリックメタバース": {
+      "ko": "메탈릭 메타버스",
+      "method": "previous_verified"
+    },
+    "メトロポリスオアシス": {
+      "ko": "메트로폴리스 오아시스",
+      "method": "previous_verified"
+    },
+    "メラメラカルデラ": {
+      "ko": "이글이글 칼데라",
+      "method": "previous_verified"
+    },
+    "メランコリー湿地": {
+      "ko": "멜랑꼴리 습지",
+      "method": "previous_verified"
+    },
+    "モノ言わぬ舌": {
+      "ko": "끊임없는 우설수",
+      "method": "previous_verified"
+    },
+    "モンキーマジック": {
+      "ko": "몽키매직",
+      "method": "previous_verified"
+    },
+    "ヤンキー宗教画": {
+      "ko": "양아치 종교화",
+      "method": "previous_verified"
+    },
+    "ユニコーン塩湖": {
+      "ko": "유니콘 호수",
+      "method": "previous_verified"
+    },
+    "ユビキタス販売所": {
+      "ko": "유비쿼터스 가게",
+      "method": "previous_verified"
+    },
+    "ユーザン海原": {
+      "ko": "커다란 대해",
+      "method": "previous_verified"
+    },
+    "ユートピアはあちら": {
+      "ko": "유토피아는 저기",
+      "method": "previous_verified"
+    },
+    "ヨーグ列島": {
+      "ko": "앞 홀로 섬",
+      "method": "previous_verified"
+    },
+    "ヨード液シー": {
+      "ko": "아이오딘 바다",
+      "method": "previous_verified"
+    },
+    "ヨーヨー広葉樹": {
+      "ko": "요요 활엽수",
+      "method": "previous_verified"
+    },
+    "ライトアップ隠し扉": {
+      "ko": "네온사인 비밀통로",
+      "method": "previous_verified"
+    },
+    "ラストラビリンス": {
+      "ko": "라스트 미로",
+      "method": "previous_verified"
+    },
+    "ラスト・ギャング": {
+      "ko": "라스트 갱",
+      "method": "previous_verified"
+    },
+    "ランプを手にした群衆": {
+      "ko": "차돌을 든 군중",
+      "method": "previous_verified"
+    },
+    "リアルＶＲ地獄": {
+      "ko": "리얼 VR 지옥",
+      "method": "previous_verified"
+    },
+    "リコピンの夕焼け": {
+      "ko": "리코펜의 노을",
+      "method": "previous_verified"
+    },
+    "リコピンの夜更け": {
+      "ko": "자정의 리코펜",
+      "method": "previous_verified"
+    },
+    "リバーピッグプラネット 超極ムズ": {
+      "ko": "리버 피그 플래닛 초극난도",
+      "method": "previous_verified"
+    },
+    "リビドーの解放": {
+      "ko": "리비도의 해방",
+      "method": "previous_verified"
+    },
+    "リンリン進化への道 超激ムズ": {
+      "ko": "세발 자전거 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "リーマン進化への道 超激ムズ": {
+      "ko": "고양리맨 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "ルサンチマンの森": {
+      "ko": "원한의 숲",
+      "method": "previous_verified"
+    },
+    "ルツボー渦": {
+      "ko": "루츠보 소용돌이",
+      "method": "previous_verified"
+    },
+    "ルーロウ丘陵": {
+      "ko": "루로우 언덕",
+      "method": "previous_verified"
+    },
+    "レイクサイドブートキャンプ": {
+      "ko": "모르는 아저씨의 강제PT",
+      "method": "previous_verified"
+    },
+    "レッドキャット作戦": {
+      "ko": "작전명 레드캣",
+      "method": "previous_verified"
+    },
+    "レッド・アラート": {
+      "ko": "적색경보",
+      "method": "previous_verified"
+    },
+    "レ・リーフの双塔": {
+      "ko": "조각의 쌍탑",
+      "method": "previous_verified"
+    },
+    "ロイヤルゼリーヘル 超極ムズ": {
+      "ko": "로얄 젤리 HELL 초극난도",
+      "method": "previous_verified"
+    },
+    "ロイヤル・ミル・クティ": {
+      "ko": "로얄 밀크티",
+      "method": "previous_verified"
+    },
+    "ロスト 超激ムズ": {
+      "ko": "로스트 초고난도",
+      "method": "previous_verified"
+    },
+    "ロデオナイト": {
+      "ko": "로데오 나이트",
+      "method": "previous_verified"
+    },
+    "ロマンスグレーハイウェイ": {
+      "ko": "로맨스 고속도로",
+      "method": "previous_verified"
+    },
+    "ロンリー論理": {
+      "ko": "론리 논리",
+      "method": "previous_verified"
+    },
+    "ローズウェイ事件": {
+      "ko": "로즈웨이 사건",
+      "method": "previous_verified"
+    },
+    "ワルキューレ平原": {
+      "ko": "왈큐레 평원",
+      "method": "previous_verified"
+    },
+    "一匹しかいない水槽": {
+      "ko": "책장이 스르륵",
+      "method": "previous_verified"
+    },
+    "一寸先は炭": {
+      "ko": "한 치 앞은 숯불",
+      "method": "previous_verified"
+    },
+    "一石三鳥Ⅰ 超極ムズ": {
+      "ko": "일석삼조 I 초극난도",
+      "method": "previous_verified"
+    },
+    "一石三鳥Ⅱ 超極ムズ": {
+      "ko": "일석삼조 II 초극난도",
+      "method": "previous_verified"
+    },
+    "一石三鳥Ⅲ 超極ムズ": {
+      "ko": "일석삼조 III 초극난도",
+      "method": "previous_verified"
+    },
+    "一筆三億五千万円": {
+      "ko": "일필 삼십오억원",
+      "method": "previous_verified"
+    },
+    "七色に分かたれる光": {
+      "ko": "일곱 빛의 분산",
+      "method": "previous_verified"
+    },
+    "万人通す番人": {
+      "ko": "프리패스 문지기",
+      "method": "previous_verified"
+    },
+    "不動のコンベア": {
+      "ko": "부동의 컨베이어 벨트",
+      "method": "previous_verified"
+    },
+    "不死町": {
+      "ko": "피닉스트리트",
+      "method": "previous_verified"
+    },
+    "不殺の釣り堀": {
+      "ko": "불살의 낚시터",
+      "method": "previous_verified"
+    },
+    "世界の中心でアイを叫んだネコ 超極ムズ": {
+      "ko": "세상의 중심에서 사랑을 외치는 고양이 초극난도",
+      "method": "previous_verified"
+    },
+    "世紀末 超極ムズ": {
+      "ko": "세기말 초극난도",
+      "method": "previous_verified"
+    },
+    "乗りかかった泥船": {
+      "ko": "낙점불입",
+      "method": "previous_verified"
+    },
+    "乙女進化への道 超激ムズ": {
+      "ko": "고양이 소녀 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "乱暴者の番人": {
+      "ko": "난폭자의 파수꾼",
+      "method": "previous_verified"
+    },
+    "乾いた庭園": {
+      "ko": "메마른 정원",
+      "method": "previous_verified"
+    },
+    "二度寝禁止区域": {
+      "ko": "5분 간격 알람 금지 구역",
+      "method": "previous_verified"
+    },
+    "二等辺三角渓": {
+      "ko": "트라이앵 골짜기",
+      "method": "previous_verified"
+    },
+    "亡命前夜の奇襲": {
+      "ko": "망명 전날 기습",
+      "method": "previous_verified"
+    },
+    "人体模型林": {
+      "ko": "인체모형림",
+      "method": "previous_verified"
+    },
+    "人力ルームランナー": {
+      "ko": "3대 500미만 냥코 금지",
+      "method": "previous_verified"
+    },
+    "人民とにんじん": {
+      "ko": "시민과 당근",
+      "method": "previous_verified"
+    },
+    "人生の落とし穴": {
+      "ko": "인생의 함정",
+      "method": "previous_verified"
+    },
+    "人面魚の渚": {
+      "ko": "인면어 둔치",
+      "method": "previous_verified"
+    },
+    "人魚の入り江": {
+      "ko": "인어의 후미",
+      "method": "previous_verified"
+    },
+    "今すぐ僕と契約を！": {
+      "ko": "지금 바로 나랑 계약을!",
+      "method": "previous_verified"
+    },
+    "仮説不要説": {
+      "ko": "가설 불필요설",
+      "method": "previous_verified"
+    },
+    "仮面武道会": {
+      "ko": "가면무도회",
+      "method": "previous_verified"
+    },
+    "何の行列だっけ広場": {
+      "ko": "냉장고 안 휴대폰",
+      "method": "previous_verified"
+    },
+    "信仰と科学の狭間": {
+      "ko": "신앙과 과학 사이",
+      "method": "previous_verified"
+    },
+    "修羅の道 極ムズ": {
+      "ko": "아수라의 길 극난도",
+      "method": "previous_verified"
+    },
+    "俺のイシュー": {
+      "ko": "라운드 숄더 올라운더",
+      "method": "previous_verified"
+    },
+    "倍返しサンドバッグ": {
+      "ko": "오늘은 하체하는 날",
+      "method": "previous_verified"
+    },
+    "倒れてないか見る仕事": {
+      "ko": "천리안 감시자",
+      "method": "previous_verified"
+    },
+    "偶像に宿る魂": {
+      "ko": "우상에 깃든 혼",
+      "method": "previous_verified"
+    },
+    "偽いちごハウス": {
+      "ko": "가짜 딸기 하우스",
+      "method": "previous_verified"
+    },
+    "偽りの寝言": {
+      "ko": "거짓의 잠꼬대",
+      "method": "previous_verified"
+    },
+    "先祖の行進": {
+      "ko": "조상님의 행진",
+      "method": "previous_verified"
+    },
+    "全身たわしスーツ": {
+      "ko": "망사 셋업 수트",
+      "method": "previous_verified"
+    },
+    "共依存化合物": {
+      "ko": "공의존 화합물",
+      "method": "previous_verified"
+    },
+    "円卓の騎士": {
+      "ko": "원탁의 기사",
+      "method": "previous_verified"
+    },
+    "再起動 Lv.MAX": {
+      "ko": "재시동 Lv.MAX",
+      "method": "previous_verified"
+    },
+    "冒険の書に記録": {
+      "ko": "모험서에 기록",
+      "method": "previous_verified"
+    },
+    "冥土喫茶OKAME 超極ムズ": {
+      "ko": "저세 상점 OKAME 초극난도",
+      "method": "previous_verified"
+    },
+    "冬の祭典 中位 極ムズ": {
+      "ko": "겨울의 제전 중위 극난도",
+      "method": "previous_verified"
+    },
+    "冬の祭典 序位 極ムズ": {
+      "ko": "겨울의 제전 하위 극난도",
+      "method": "previous_verified"
+    },
+    "冬の祭典 最上位 超極ムズ": {
+      "ko": "겨울의 제전 최상위 초극난도",
+      "method": "previous_verified"
+    },
+    "冷凍マグロ戦線": {
+      "ko": "냉동참치 전선",
+      "method": "previous_verified"
+    },
+    "冷徹水風呂": {
+      "ko": "냉철수 욕조",
+      "method": "previous_verified"
+    },
+    "冷静スクリーム": {
+      "ko": "냉정 스크림",
+      "method": "previous_verified"
+    },
+    "刃物のような襟": {
+      "ko": "칼날 같은 카라",
+      "method": "previous_verified"
+    },
+    "前衛的な印象派": {
+      "ko": "아방가르드한 인상파",
+      "method": "previous_verified"
+    },
+    "力なきゼロ磁場": {
+      "ko": "제로 마그네틱 필드",
+      "method": "previous_verified"
+    },
+    "力を計り得ぬ者": {
+      "ko": "힘을 측정할 수 없는 자",
+      "method": "previous_verified"
+    },
+    "半身浴岩": {
+      "ko": "반식욕 바위",
+      "method": "previous_verified"
+    },
+    "卑怯者の罠": {
+      "ko": "비겁자의 덫",
+      "method": "previous_verified"
+    },
+    "厄災飛来 超激ムズ": {
+      "ko": "액운비래 초고난도",
+      "method": "previous_verified"
+    },
+    "原始に宿る魂": {
+      "ko": "이승에 머무는 영혼",
+      "method": "previous_verified"
+    },
+    "原始の古渦 超極ムズ": {
+      "ko": "원시의 오래된 소용돌이 초극난도",
+      "method": "previous_verified"
+    },
+    "原始の強敵、再び": {
+      "ko": "원시의 강적, 또다시",
+      "method": "previous_verified"
+    },
+    "原罪を贖いし時": {
+      "ko": "원죄를 속죄할 때",
+      "method": "previous_verified"
+    },
+    "反乱スクラップ": {
+      "ko": "반란 스크랩",
+      "method": "previous_verified"
+    },
+    "反抗的経済水域": {
+      "ko": "반항적 경제수역",
+      "method": "previous_verified"
+    },
+    "反物質ジャングル": {
+      "ko": "안티매터 정글",
+      "method": "previous_verified"
+    },
+    "反証だらけ半生": {
+      "ko": "반증뿐인 반평생",
+      "method": "previous_verified"
+    },
+    "収穫量を占う地方放送": {
+      "ko": "벌레와의 사투",
+      "method": "previous_verified"
+    },
+    "受け継がれる意志 極ムズ": {
+      "ko": "계속되는 의지 극난도",
+      "method": "previous_verified"
+    },
+    "古代の呪い": {
+      "ko": "고대의 저주",
+      "method": "previous_verified"
+    },
+    "古代の神秘 極ムズ": {
+      "ko": "고대의 신비 극난도",
+      "method": "previous_verified"
+    },
+    "古代を統べる猿人": {
+      "ko": "고대를 지배하는 유인원",
+      "method": "previous_verified"
+    },
+    "名誉一つに賭す命": {
+      "ko": "명예에 목숨 건 생명",
+      "method": "previous_verified"
+    },
+    "呪いの体質": {
+      "ko": "저주 체질",
+      "method": "previous_verified"
+    },
+    "呪われた永久凍土": {
+      "ko": "저주로 얼어붙은 땅",
+      "method": "previous_verified"
+    },
+    "命のせせらぎ": {
+      "ko": "생명의 시냇물 소리",
+      "method": "previous_verified"
+    },
+    "和尚のスケベな水墨画": {
+      "ko": "스님의 호색 수묵화",
+      "method": "previous_verified"
+    },
+    "哲学の道": {
+      "ko": "철학의 길",
+      "method": "previous_verified"
+    },
+    "哺乳類？ 超激ムズ": {
+      "ko": "포유류? 초고난도",
+      "method": "previous_verified"
+    },
+    "嘘つきの末路": {
+      "ko": "허풍쟁이의 말로",
+      "method": "previous_verified"
+    },
+    "四皇帝の殿堂": {
+      "ko": "네 황제의 궁전",
+      "method": "previous_verified"
+    },
+    "因縁ゴシップスター": {
+      "ko": "소문의 그녀석",
+      "method": "previous_verified"
+    },
+    "地下制御室": {
+      "ko": "지하 제어실",
+      "method": "previous_verified"
+    },
+    "地下帝国からの刺客": {
+      "ko": "지하제국의 자객",
+      "method": "previous_verified"
+    },
+    "垢い敵、黒い汗": {
+      "ko": "더러운 적 검은 땀",
+      "method": "previous_verified"
+    },
+    "境界線の晩鐘": {
+      "ko": "경계선의 만종",
+      "method": "previous_verified"
+    },
+    "境界線奪還作戦": {
+      "ko": "경계선 탈환 작전",
+      "method": "previous_verified"
+    },
+    "増殖するスペアキー": {
+      "ko": "무한 증식 비닐 우산",
+      "method": "previous_verified"
+    },
+    "壮絶な荒波": {
+      "ko": "장렬한 파도",
+      "method": "previous_verified"
+    },
+    "夏の祭典 上位 極ムズ": {
+      "ko": "여름의 제전 상위 극난도",
+      "method": "previous_verified"
+    },
+    "夏の祭典 最上位 極ムズ": {
+      "ko": "여름의 제전 최상위 극난도",
+      "method": "previous_verified"
+    },
+    "夏の祭典 王位 超極ムズ": {
+      "ko": "여름의 제전 왕위 초극난도",
+      "method": "previous_verified"
+    },
+    "夕焼けのハドロン": {
+      "ko": "저녁노을의 하드론",
+      "method": "previous_verified"
+    },
+    "夕焼けの咆哮": {
+      "ko": "저녁노을의 표효",
+      "method": "previous_verified"
+    },
+    "夕焼けの密猟者": {
+      "ko": "저녁노을의 밀렵꾼",
+      "method": "previous_verified"
+    },
+    "夕焼けブロックチェーン": {
+      "ko": "석양의 블록체인",
+      "method": "previous_verified"
+    },
+    "夕飯の終着点": {
+      "ko": "알밥천국",
+      "method": "previous_verified"
+    },
+    "多様性とアルカリ性": {
+      "ko": "다양성과 알카리성",
+      "method": "previous_verified"
+    },
+    "夜のしじま": {
+      "ko": "밤의 정적",
+      "method": "previous_verified"
+    },
+    "夜景残業問題": {
+      "ko": "야경 잔업 문제",
+      "method": "previous_verified"
+    },
+    "夢と幻": {
+      "ko": "꿈과 환상",
+      "method": "previous_verified"
+    },
+    "夢堕ち 超極ムズ": {
+      "ko": "꿈속에서 초극난도",
+      "method": "previous_verified"
+    },
+    "大いなる小さき一歩": {
+      "ko": "위대한 작은 발걸음",
+      "method": "previous_verified"
+    },
+    "大人になったな、シンジ": {
+      "ko": "신지, 어른이 되었구나",
+      "method": "previous_verified"
+    },
+    "大地を揺るがす": {
+      "ko": "대지를 흔들다",
+      "method": "previous_verified"
+    },
+    "大崩落パニック": {
+      "ko": "대붕괴 패닉",
+      "method": "previous_verified"
+    },
+    "大御所大博覧会": {
+      "ko": "대가의 대박람회",
+      "method": "previous_verified"
+    },
+    "大潮の渚": {
+      "ko": "만조의 바닷가",
+      "method": "previous_verified"
+    },
+    "大聖魚Ⅰ 極ムズ": {
+      "ko": "대성어 Ⅰ 극난도",
+      "method": "previous_verified"
+    },
+    "大聖魚Ⅱ 超極ムズ": {
+      "ko": "대성어 Ⅱ 초극난도",
+      "method": "previous_verified"
+    },
+    "大聖魚Ⅲ 超極ムズ": {
+      "ko": "대성어 Ⅲ 초극난도",
+      "method": "previous_verified"
+    },
+    "大聖魚決戦 神ムズ": {
+      "ko": "대성어 결전 신난도",
+      "method": "previous_verified"
+    },
+    "大脱獄": {
+      "ko": "대탈옥",
+      "method": "previous_verified"
+    },
+    "大脱走": {
+      "ko": "대탈주",
+      "method": "previous_verified"
+    },
+    "大草原の小さな入り江": {
+      "ko": "대초원의 작은 후미",
+      "method": "previous_verified"
+    },
+    "大遅刻プリースト": {
+      "ko": "지각왕 프리스트",
+      "method": "previous_verified"
+    },
+    "大魔王Ⅰ 極ムズ": {
+      "ko": "대마왕 Ⅰ 극난도",
+      "method": "previous_verified"
+    },
+    "大魔王Ⅱ 超極ムズ": {
+      "ko": "대마왕 Ⅱ 초극난도",
+      "method": "previous_verified"
+    },
+    "大魔王Ⅲ 超極ムズ": {
+      "ko": "대마왕 Ⅲ 초극난도",
+      "method": "previous_verified"
+    },
+    "大魔王決戦 神ムズ": {
+      "ko": "대마왕 결전 신난도",
+      "method": "previous_verified"
+    },
+    "天へと昇る煙突": {
+      "ko": "하늘로 치솟는 굴뚝",
+      "method": "previous_verified"
+    },
+    "天使に闇ソングを 超極ムズ": {
+      "ko": "천사의 장송곡 초극난도",
+      "method": "previous_verified"
+    },
+    "天国に一番近い水飲み場": {
+      "ko": "천국의 오아시스",
+      "method": "previous_verified"
+    },
+    "天国ハラスメント": {
+      "ko": "부조리 천국",
+      "method": "previous_verified"
+    },
+    "天変地異の局面": {
+      "ko": "천재지변의 국면",
+      "method": "previous_verified"
+    },
+    "天寿を授ける頂": {
+      "ko": "천수를 누리는 정상",
+      "method": "previous_verified"
+    },
+    "天意に背く落果": {
+      "ko": "하늘을 거스르는 사과",
+      "method": "previous_verified"
+    },
+    "天災の七光り 超極ムズ": {
+      "ko": "무지개빛 천재지변 초극난도",
+      "method": "previous_verified"
+    },
+    "天空秘宝の館": {
+      "ko": "천공비보의 관",
+      "method": "previous_verified"
+    },
+    "太古の力": {
+      "ko": "태고의 힘",
+      "method": "previous_verified"
+    },
+    "太古の魔力": {
+      "ko": "태고의 마력",
+      "method": "previous_verified"
+    },
+    "契約の杯": {
+      "ko": "계약의 잔",
+      "method": "previous_verified"
+    },
+    "女優進化への道 超激ムズ": {
+      "ko": "여배우 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "女王様の休日進化への道 超激ムズ": {
+      "ko": "여왕님의 휴일 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "女王猫進化への道 超激ムズ": {
+      "ko": "여왕 고양이 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "好き好きスキーム": {
+      "ko": "사랑의 반응 경로",
+      "method": "previous_verified"
+    },
+    "妖怪大王Ⅰ 極ムズ": {
+      "ko": "요괴 대왕 Ⅰ 극난도",
+      "method": "previous_verified"
+    },
+    "妖怪大王Ⅱ 超極ムズ": {
+      "ko": "요괴 대왕 Ⅱ 초극난도",
+      "method": "previous_verified"
+    },
+    "妖怪大王Ⅲ 超極ムズ": {
+      "ko": "요괴 대왕 Ⅲ 초극난도",
+      "method": "previous_verified"
+    },
+    "妖怪大王決戦 神ムズ": {
+      "ko": "요괴 대왕 결전 신난도",
+      "method": "previous_verified"
+    },
+    "始祖の古渦 超極ムズ": {
+      "ko": "시조의 오래된 소용돌이 초극난도",
+      "method": "previous_verified"
+    },
+    "嫉妬の炎色反応": {
+      "ko": "질투의 불꽃 반응",
+      "method": "previous_verified"
+    },
+    "子役上がり": {
+      "ko": "아역부터 출발",
+      "method": "previous_verified"
+    },
+    "子羊の寝室": {
+      "ko": "새끼 염소의 침실",
+      "method": "previous_verified"
+    },
+    "学園紛争遺跡": {
+      "ko": "12시가 되면은",
+      "method": "previous_verified"
+    },
+    "宇宙の法則が乱れた": {
+      "ko": "뒤틀린 우주의 법칙",
+      "method": "previous_verified"
+    },
+    "宇宙開発局": {
+      "ko": "우주개발국",
+      "method": "previous_verified"
+    },
+    "実刑判決": {
+      "ko": "실형 판결",
+      "method": "previous_verified"
+    },
+    "密告者軍団": {
+      "ko": "밀고자 집단",
+      "method": "previous_verified"
+    },
+    "密室スイート客室": {
+      "ko": "스위트 밀실",
+      "method": "previous_verified"
+    },
+    "寸止め打撃対戦": {
+      "ko": "타격 직전까지의 대전",
+      "method": "previous_verified"
+    },
+    "屋上の襲撃者 激ムズ": {
+      "ko": "옥상의 습격자 고난도",
+      "method": "previous_verified"
+    },
+    "山賊かぶれ": {
+      "ko": "산적놀이",
+      "method": "previous_verified"
+    },
+    "巨大防壁岩礁": {
+      "ko": "위대한 장벽 암초",
+      "method": "previous_verified"
+    },
+    "帝王の教室": {
+      "ko": "제왕의 교실",
+      "method": "previous_verified"
+    },
+    "幸せになって、くれるよね･･･": {
+      "ko": "행복해질 거야...",
+      "method": "previous_verified"
+    },
+    "幸せに暮らしました": {
+      "ko": "행복하게 살았답니다",
+      "method": "previous_verified"
+    },
+    "幸せを願った少年": {
+      "ko": "행복을 바란 소년",
+      "method": "previous_verified"
+    },
+    "幻のオンスケ": {
+      "ko": "얼라인 스케이트",
+      "method": "previous_verified"
+    },
+    "底なしのおはじき沼": {
+      "ko": "유리구슬 연못",
+      "method": "previous_verified"
+    },
+    "弱肉朝食": {
+      "ko": "약육조식",
+      "method": "previous_verified"
+    },
+    "彩りトリミング": {
+      "ko": "스트리트리밍",
+      "method": "previous_verified"
+    },
+    "影に落ちた騎士王 極ムズ": {
+      "ko": "그림자에 떨어진 기사왕 극난도",
+      "method": "previous_verified"
+    },
+    "復活の偽呪文": {
+      "ko": "부활의 거짓 주문",
+      "method": "previous_verified"
+    },
+    "復讐の準備": {
+      "ko": "복수의 준비",
+      "method": "previous_verified"
+    },
+    "心の師匠 Lv.MAX": {
+      "ko": "마음의 스승 Lv.MAX",
+      "method": "previous_verified"
+    },
+    "忍び寄る戦慄の詩": {
+      "ko": "전율의 시",
+      "method": "previous_verified"
+    },
+    "忍び遭い": {
+      "ko": "밀회",
+      "method": "previous_verified"
+    },
+    "忍者進化への道 超激ムズ": {
+      "ko": "닌자 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "忘れがたきタピ丘": {
+      "ko": "풍덩 쇼콜라",
+      "method": "previous_verified"
+    },
+    "忘れられた橋": {
+      "ko": "산낙 지하상가",
+      "method": "previous_verified"
+    },
+    "忠誠の祈り": {
+      "ko": "충성의 기도",
+      "method": "previous_verified"
+    },
+    "怒りと闘争心": {
+      "ko": "분노와 투쟁심",
+      "method": "previous_verified"
+    },
+    "怒りのマグロ戦線": {
+      "ko": "분노의 참치전선",
+      "method": "previous_verified"
+    },
+    "急がないで傍にいて～慕情～": {
+      "ko": "영원히 곁에 있어줘",
+      "method": "previous_verified"
+    },
+    "怨叫カプラ": {
+      "ko": "절규 커플러",
+      "method": "previous_verified"
+    },
+    "怪獣ショー岩窟": {
+      "ko": "괴수 쇼 바위굴",
+      "method": "previous_verified"
+    },
+    "恋愛コンビナート": {
+      "ko": "연애 콤비나트",
+      "method": "previous_verified"
+    },
+    "悪党の密林": {
+      "ko": "악당의 밀림",
+      "method": "previous_verified"
+    },
+    "悪夢からの覚醒": {
+      "ko": "악몽으로부터 각성",
+      "method": "previous_verified"
+    },
+    "悪色吐息 超極ムズ": {
+      "ko": "디아볼릭 브레스 초극난도",
+      "method": "previous_verified"
+    },
+    "悪逆無道 神ムズ": {
+      "ko": "포학무도 신난도",
+      "method": "previous_verified"
+    },
+    "悪魔の呟き 極ムズ": {
+      "ko": "악마의 중얼거림 극난도",
+      "method": "previous_verified"
+    },
+    "悪魔の呟き 超激ムズ": {
+      "ko": "악마의 중얼거림 초고난도",
+      "method": "previous_verified"
+    },
+    "悪魔の囁き 極ムズ": {
+      "ko": "악마의 속삭임 극난도",
+      "method": "previous_verified"
+    },
+    "悪魔の囁き 超極ムズ": {
+      "ko": "악마의 속삭임 초극난도",
+      "method": "previous_verified"
+    },
+    "悪魔の壁画": {
+      "ko": "악마의 벽화",
+      "method": "previous_verified"
+    },
+    "悪魔の律動 超極ムズ": {
+      "ko": "악마의 전율 초극난도",
+      "method": "previous_verified"
+    },
+    "悪魔の旋律 超極ムズ": {
+      "ko": "악마의 선율 초극난도",
+      "method": "previous_verified"
+    },
+    "悪魔城の封印": {
+      "ko": "악마성의 봉인",
+      "method": "previous_verified"
+    },
+    "悪魔転生 超極ムズ": {
+      "ko": "악마 환생 초극난도",
+      "method": "previous_verified"
+    },
+    "愚者の絶望": {
+      "ko": "어리석은자의 절망",
+      "method": "previous_verified"
+    },
+    "愛と死": {
+      "ko": "사랑과 죽음",
+      "method": "previous_verified"
+    },
+    "愛情のまなざし": {
+      "ko": "애정의 눈빛",
+      "method": "previous_verified"
+    },
+    "感染、島の主": {
+      "ko": "감염된 섬주인",
+      "method": "previous_verified"
+    },
+    "感染者密航": {
+      "ko": "감염자 밀항",
+      "method": "previous_verified"
+    },
+    "憂愁の木": {
+      "ko": "근심의 나무",
+      "method": "previous_verified"
+    },
+    "成人進化への道 超激ムズ": {
+      "ko": "냥코 성인 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "我を忘れた猫 超激ムズ": {
+      "ko": "자아상실 초고난도",
+      "method": "previous_verified"
+    },
+    "戦士の黎明": {
+      "ko": "전사의 여명",
+      "method": "previous_verified"
+    },
+    "手際の良い時間泥棒": {
+      "ko": "시간 순삭 전문가",
+      "method": "previous_verified"
+    },
+    "拷問部屋": {
+      "ko": "고문실",
+      "method": "previous_verified"
+    },
+    "排他的経済水域": {
+      "ko": "배타적 경제수역",
+      "method": "previous_verified"
+    },
+    "推しロス・コープ": {
+      "ko": "집착의 파동 변화",
+      "method": "previous_verified"
+    },
+    "政府の犬": {
+      "ko": "정부의 개",
+      "method": "previous_verified"
+    },
+    "料金所ヒートショック": {
+      "ko": "톨게이트 히트 쇼크",
+      "method": "previous_verified"
+    },
+    "斜陽のソルジャー": {
+      "ko": "석양의 솔져",
+      "method": "previous_verified"
+    },
+    "斜陽の警告": {
+      "ko": "몰락의 경고",
+      "method": "previous_verified"
+    },
+    "新たなる戦い": {
+      "ko": "새로운 도전",
+      "method": "previous_verified"
+    },
+    "新約・ネコ補完計画 極ムズ": {
+      "ko": "새로운 고양이 보충 계획 극난도",
+      "method": "previous_verified"
+    },
+    "昇天スパマッサージ": {
+      "ko": "저세상 스파 마사지",
+      "method": "previous_verified"
+    },
+    "星々を映す地下水": {
+      "ko": "별들이 비치는 지하수",
+      "method": "previous_verified"
+    },
+    "星くず街道": {
+      "ko": "별들의 가도",
+      "method": "previous_verified"
+    },
+    "星座になったネコども": {
+      "ko": "별자리가 된 고양이들",
+      "method": "previous_verified"
+    },
+    "星降るウイスキーグラス": {
+      "ko": "별이 쏟아지는 위스키 잔",
+      "method": "previous_verified"
+    },
+    "星降る大海": {
+      "ko": "별바다",
+      "method": "previous_verified"
+    },
+    "春の祭典 最上位 極ムズ": {
+      "ko": "봄의 제전 최상위 극난도",
+      "method": "previous_verified"
+    },
+    "春の祭典 王位 極ムズ": {
+      "ko": "봄의 제전 왕위 극난도",
+      "method": "previous_verified"
+    },
+    "晩餐の館": {
+      "ko": "이동하는 갈비",
+      "method": "previous_verified"
+    },
+    "暁フロンターレ": {
+      "ko": "새벽 프론탈레",
+      "method": "previous_verified"
+    },
+    "暁フロンティア": {
+      "ko": "새벽 프런티어",
+      "method": "previous_verified"
+    },
+    "暗い・狭い・怖い道": {
+      "ko": "폐쇄공포증",
+      "method": "previous_verified"
+    },
+    "暗い魔窟の主": {
+      "ko": "어두운 마굴의 주인",
+      "method": "previous_verified"
+    },
+    "暗黒憑依 超激ムズ": {
+      "ko": "암흑빙의 초고난도",
+      "method": "previous_verified"
+    },
+    "暗黒街の支配者": {
+      "ko": "암흑가의 지배자",
+      "method": "previous_verified"
+    },
+    "暴虐カルデラ": {
+      "ko": "공포의 칼데라",
+      "method": "previous_verified"
+    },
+    "暴風カーニバル 極ムズ": {
+      "ko": "폭풍 카니발 극난도",
+      "method": "previous_verified"
+    },
+    "暴風カーニバル2 極ムズ": {
+      "ko": "폭풍 카니발2 극난도",
+      "method": "previous_verified"
+    },
+    "暴風カーニバル3 極ムズ": {
+      "ko": "폭풍 카니발3 극난도",
+      "method": "previous_verified"
+    },
+    "最も美しき無限の形": {
+      "ko": "끝없이 아름답고 경이로운 형태",
+      "method": "previous_verified"
+    },
+    "最凶戦士 極ムズ": {
+      "ko": "최흉전사 극난도",
+      "method": "previous_verified"
+    },
+    "最強の拒絶タイプ 超極ムズ": {
+      "ko": "최강의 거절 타입 초극난도",
+      "method": "previous_verified"
+    },
+    "最強の破壊神 超極ムズ": {
+      "ko": "최강의 파괴 신 초극난도",
+      "method": "previous_verified"
+    },
+    "最後の屍者 超極ムズ": {
+      "ko": "최후의 망자 초극난도",
+      "method": "previous_verified"
+    },
+    "最後の死者 超極ムズ": {
+      "ko": "최후의 사자 초극난도",
+      "method": "previous_verified"
+    },
+    "最果ての祠": {
+      "ko": "마지막 사당",
+      "method": "previous_verified"
+    },
+    "最終兵器トロ": {
+      "ko": "최종병기 참치",
+      "method": "previous_verified"
+    },
+    "最終最凶": {
+      "ko": "최종최흉",
+      "method": "previous_verified"
+    },
+    "月の箱舟": {
+      "ko": "달의 돛단배",
+      "method": "previous_verified"
+    },
+    "月明かりのビーチ": {
+      "ko": "달빛 해변",
+      "method": "previous_verified"
+    },
+    "有限会社湯気": {
+      "ko": "주식 회사 수증기",
+      "method": "previous_verified"
+    },
+    "木くずを掻き分けて": {
+      "ko": "수풀을 헤치고",
+      "method": "previous_verified"
+    },
+    "本能に従順な山伏": {
+      "ko": "본능에 순종한 자연인",
+      "method": "previous_verified"
+    },
+    "来怨キング 超極ムズ": {
+      "ko": "라이블온 킹 초극난도",
+      "method": "previous_verified"
+    },
+    "枯れた集落": {
+      "ko": "몰락한 마을",
+      "method": "previous_verified"
+    },
+    "栄光のグローリー": {
+      "ko": "영광의 글로리",
+      "method": "previous_verified"
+    },
+    "校則と罰則": {
+      "ko": "절대 가서는 안돼",
+      "method": "previous_verified"
+    },
+    "校長先生の反逆": {
+      "ko": "입에는 빨간 마스크",
+      "method": "previous_verified"
+    },
+    "極寒クリーム雪原": {
+      "ko": "꽁꽁 크림 설원",
+      "method": "previous_verified"
+    },
+    "極彩色の真実 極ムズ": {
+      "ko": "극채색의 진실 극난도",
+      "method": "previous_verified"
+    },
+    "極悪三兄弟とのデュエル": {
+      "ko": "극악무도한 삼형제와의 결투",
+      "method": "previous_verified"
+    },
+    "極悪非道 神ムズ": {
+      "ko": "극악무도 신난도",
+      "method": "previous_verified"
+    },
+    "楽しい強制労働": {
+      "ko": "즐거운 강제노동",
+      "method": "previous_verified"
+    },
+    "楽園のいきもの達": {
+      "ko": "낙원의 생명체",
+      "method": "previous_verified"
+    },
+    "権力と万有引力": {
+      "ko": "권력과 만유인력",
+      "method": "previous_verified"
+    },
+    "権力者の隠れミノ": {
+      "ko": "열광의 도가니",
+      "method": "previous_verified"
+    },
+    "樹冠の祭壇": {
+      "ko": "나뭇가지 제단",
+      "method": "previous_verified"
+    },
+    "樹液の湧き出る地下道": {
+      "ko": "수액이 솟아나는 지하도",
+      "method": "previous_verified"
+    },
+    "機々械々 超激ムズ": {
+      "ko": "기기계계초고난도",
+      "method": "previous_verified"
+    },
+    "欺きのムキムキ": {
+      "ko": "물근육 벌크업",
+      "method": "previous_verified"
+    },
+    "歌うま姫の家": {
+      "ko": "흑설공주",
+      "method": "previous_verified"
+    },
+    "武家屋敷お家騒動": {
+      "ko": "명문가의 집안싸움",
+      "method": "previous_verified"
+    },
+    "死者のセカンドライフ": {
+      "ko": "사자의 세컨드 라이프",
+      "method": "previous_verified"
+    },
+    "死者の行進 極ムズ": {
+      "ko": "망자의 행진 극난도",
+      "method": "previous_verified"
+    },
+    "死臭ポエム": {
+      "ko": "시집가는 시집",
+      "method": "previous_verified"
+    },
+    "死霊の館": {
+      "ko": "사령의 관",
+      "method": "previous_verified"
+    },
+    "殺人鬼ジャングル": {
+      "ko": "살인귀 정글",
+      "method": "previous_verified"
+    },
+    "殺戮兵器シラ・ス": {
+      "ko": "살육병기 멸치",
+      "method": "previous_verified"
+    },
+    "毒言に満ちた荒原": {
+      "ko": "독설로 가득 찬 사막",
+      "method": "previous_verified"
+    },
+    "毛深き坑道": {
+      "ko": "복실복실 갱도",
+      "method": "previous_verified"
+    },
+    "毛皮をかき揚げて": {
+      "ko": "모피를 쓸어올리며",
+      "method": "previous_verified"
+    },
+    "民の手の松明": {
+      "ko": "백성의 손에 들린 횃불",
+      "method": "previous_verified"
+    },
+    "気高き暴君との対決": {
+      "ko": "도도한 폭군과의 대결",
+      "method": "previous_verified"
+    },
+    "水中洞窟の生態系": {
+      "ko": "수중 동굴의 생태계",
+      "method": "previous_verified"
+    },
+    "水着美女の面影": {
+      "ko": "미녀의 뒤태",
+      "method": "previous_verified"
+    },
+    "水辺環凶保全運動 超極ムズ": {
+      "ko": "거슬러 내려가는 냥코들 초극난도",
+      "method": "previous_verified"
+    },
+    "永久を授ける頂": {
+      "ko": "영원의 정점",
+      "method": "previous_verified"
+    },
+    "求婚前夜の凪": {
+      "ko": "청혼전야의 고요",
+      "method": "previous_verified"
+    },
+    "汗とアルデヒド": {
+      "ko": "아세트알데하이드",
+      "method": "previous_verified"
+    },
+    "決戦の地": {
+      "ko": "결전의 땅",
+      "method": "previous_verified"
+    },
+    "決断の時": {
+      "ko": "결단의 순간",
+      "method": "previous_verified"
+    },
+    "沈没船リノベーション宿": {
+      "ko": "리모델링 침몰선",
+      "method": "previous_verified"
+    },
+    "河の流れに身をまかせ 超極ムズ": {
+      "ko": "흐르는 강물을 똑바로 초극난도",
+      "method": "previous_verified"
+    },
+    "河の流れのように 超極ムズ": {
+      "ko": "강의 흐름처럼 초극난도",
+      "method": "previous_verified"
+    },
+    "河童の冷や汗": {
+      "ko": "물귀신의 식은땀",
+      "method": "previous_verified"
+    },
+    "油の虹": {
+      "ko": "기름 무지개",
+      "method": "previous_verified"
+    },
+    "泣き砂海岸": {
+      "ko": "눈물의 모래사변",
+      "method": "previous_verified"
+    },
+    "泥まみれ渓流": {
+      "ko": "말뚝박기 시냇물",
+      "method": "previous_verified"
+    },
+    "泥酔マッサージャー": {
+      "ko": "만취 마사지사",
+      "method": "previous_verified"
+    },
+    "活きのいい死霊たち": {
+      "ko": "싱싱한 사령들",
+      "method": "previous_verified"
+    },
+    "活字海域": {
+      "ko": "활자 해역",
+      "method": "previous_verified"
+    },
+    "流した涙の川": {
+      "ko": "흘린 눈물의 강",
+      "method": "previous_verified"
+    },
+    "流星大踊り": {
+      "ko": "메테오 댄스",
+      "method": "previous_verified"
+    },
+    "海の水は塩辛い": {
+      "ko": "바닷물은 짜다",
+      "method": "previous_verified"
+    },
+    "海より還りし亡者": {
+      "ko": "바다에서 돌아온 망자",
+      "method": "previous_verified"
+    },
+    "海坊主の家": {
+      "ko": "허깨비의 집",
+      "method": "previous_verified"
+    },
+    "海底2マイル": {
+      "ko": "해저 2십리",
+      "method": "previous_verified"
+    },
+    "涙にぬれた子犬よ": {
+      "ko": "눈물 젖은 강아지",
+      "method": "previous_verified"
+    },
+    "深層に眠る偽善": {
+      "ko": "깊이 잠든 위선",
+      "method": "previous_verified"
+    },
+    "深海限界の先に": {
+      "ko": "수심 한계 돌파",
+      "method": "previous_verified"
+    },
+    "深爪を負った夜": {
+      "ko": "짧은 손톱의 밤",
+      "method": "previous_verified"
+    },
+    "深紅の悲劇 超激ムズ": {
+      "ko": "심홍의 비극 초고난도",
+      "method": "previous_verified"
+    },
+    "湯けむり極楽地獄": {
+      "ko": "수증기 극락지옥",
+      "method": "previous_verified"
+    },
+    "源泉に潜む者達": {
+      "ko": "원천에 숨은 자들",
+      "method": "previous_verified"
+    },
+    "溶岩温浴": {
+      "ko": "용암 온천",
+      "method": "previous_verified"
+    },
+    "漁業組合の反乱": {
+      "ko": "어업조합의 반란",
+      "method": "previous_verified"
+    },
+    "漂流バスターミナル": {
+      "ko": "표류 버스 터미널",
+      "method": "previous_verified"
+    },
+    "漂流恐失 超極ムズ": {
+      "ko": "호러 아일랜드 초극난도",
+      "method": "previous_verified"
+    },
+    "潔癖症の番人": {
+      "ko": "결백증 파수꾼",
+      "method": "previous_verified"
+    },
+    "潮干狩りの浜": {
+      "ko": "조개잡이 해변",
+      "method": "previous_verified"
+    },
+    "火の国ダイ=ナマイト": {
+      "ko": "불의 나라 다이 = 너마이트",
+      "method": "previous_verified"
+    },
+    "火口を守る者": {
+      "ko": "화구를 지키는 자",
+      "method": "previous_verified"
+    },
+    "火焔型土器でおふくろの味": {
+      "ko": "할머니의 손자확대",
+      "method": "previous_verified"
+    },
+    "灰の雨、愛のため": {
+      "ko": "화산재 소나기",
+      "method": "previous_verified"
+    },
+    "炎の檻": {
+      "ko": "불꽃의 우리",
+      "method": "previous_verified"
+    },
+    "炎上する青": {
+      "ko": "타오르는 파랑",
+      "method": "previous_verified"
+    },
+    "炸裂！赤鴉豪焦破 極ムズ": {
+      "ko": "작렬! 적아호초파 극난도",
+      "method": "previous_verified"
+    },
+    "無人駅の決闘": {
+      "ko": "무인역에서의 결투",
+      "method": "previous_verified"
+    },
+    "無学なソフィスト": {
+      "ko": "무지한 소피스트",
+      "method": "previous_verified"
+    },
+    "無断呼吸禁止法": {
+      "ko": "무단 호흡 금지법",
+      "method": "previous_verified"
+    },
+    "無気力コースター": {
+      "ko": "무기력 코스터",
+      "method": "previous_verified"
+    },
+    "無礼講ナイトビーチ": {
+      "ko": "밤바다의 야자타임",
+      "method": "previous_verified"
+    },
+    "無秩序な鼓動": {
+      "ko": "불규칙한 심장 박동",
+      "method": "previous_verified"
+    },
+    "無茶ぶり進水式": {
+      "ko": "무모한 진수식",
+      "method": "previous_verified"
+    },
+    "無農薬で造った染色体": {
+      "ko": "무농약으로 만든 염색체",
+      "method": "previous_verified"
+    },
+    "無酸素エアロバイク": {
+      "ko": "냥코하면 근손실 오나요?",
+      "method": "previous_verified"
+    },
+    "無限の剣製 激ムズ": {
+      "ko": "무한의 검제 고난도",
+      "method": "previous_verified"
+    },
+    "焼ける赤土": {
+      "ko": "불타는 붉은 흙",
+      "method": "previous_verified"
+    },
+    "焼肉焼いても街焼くな": {
+      "ko": "안심하긴 이르다",
+      "method": "previous_verified"
+    },
+    "煽ってくる巡礼者": {
+      "ko": "선동의 순례자",
+      "method": "previous_verified"
+    },
+    "熱帯チョコバナナ園": {
+      "ko": "열대 초코 바나나 공원",
+      "method": "previous_verified"
+    },
+    "熱湯風呂我慢大会": {
+      "ko": "열탕 오래 참기 대회",
+      "method": "previous_verified"
+    },
+    "燃えるカオマンガイ": {
+      "ko": "불타는 카오만까이",
+      "method": "previous_verified"
+    },
+    "燃え萌えツリー": {
+      "ko": "붉게 물든 푸른 산",
+      "method": "previous_verified"
+    },
+    "父の背中": {
+      "ko": "아버지의 등",
+      "method": "previous_verified"
+    },
+    "牧場の守護者": {
+      "ko": "목장의 수호자",
+      "method": "previous_verified"
+    },
+    "犬も歩けばボーン": {
+      "ko": "남로내불",
+      "method": "previous_verified"
+    },
+    "狂喜乱舞 極ムズ": {
+      "ko": "광희난무 극난도",
+      "method": "previous_verified"
+    },
+    "狂喜乱舞 超極ムズ": {
+      "ko": "광희난무 초극난도",
+      "method": "previous_verified"
+    },
+    "狂戦士 超激ムズ": {
+      "ko": "광전사 초고난도",
+      "method": "previous_verified"
+    },
+    "狂竜？ 極ムズ": {
+      "ko": "광룡? 극난도",
+      "method": "previous_verified"
+    },
+    "独裁者の庭": {
+      "ko": "독재자의 정원",
+      "method": "previous_verified"
+    },
+    "猛る草原の巨象": {
+      "ko": "날뛰는 초원의 거상",
+      "method": "previous_verified"
+    },
+    "猪鹿鳥 超激ムズ": {
+      "ko": "까마귀 눈 초고난도",
+      "method": "previous_verified"
+    },
+    "猫たちの沈黙": {
+      "ko": "고양이들의 침묵",
+      "method": "previous_verified"
+    },
+    "猫対性理論": {
+      "ko": "냥대성 이론",
+      "method": "previous_verified"
+    },
+    "獄楽浄土 超極ムズ": {
+      "ko": "극락정토 초극난도",
+      "method": "previous_verified"
+    },
+    "獄楽穢土 超極ムズ": {
+      "ko": "극락예토 초극난도",
+      "method": "previous_verified"
+    },
+    "獅子累々 極ムズ": {
+      "ko": "사자갈기 극난도",
+      "method": "previous_verified"
+    },
+    "獣窟王": {
+      "ko": "짐승남 동굴",
+      "method": "previous_verified"
+    },
+    "玉座に牙むく群衆": {
+      "ko": "왕좌에 맞선 군중",
+      "method": "previous_verified"
+    },
+    "王子様の出てくる森": {
+      "ko": "냥코 탄 왕자님",
+      "method": "previous_verified"
+    },
+    "理容ももの毛姫": {
+      "ko": "인터카스텔라",
+      "method": "previous_verified"
+    },
+    "環境保護団体": {
+      "ko": "환경보호단체",
+      "method": "previous_verified"
+    },
+    "甘えんぼ暗殺者": {
+      "ko": "아기 암살자",
+      "method": "previous_verified"
+    },
+    "生誕のジレンマ": {
+      "ko": "탄생의 딜레마",
+      "method": "previous_verified"
+    },
+    "生贄探して道の駅": {
+      "ko": "슈퍼까지 걸어서 30분",
+      "method": "previous_verified"
+    },
+    "異国の門": {
+      "ko": "이국의 문",
+      "method": "previous_verified"
+    },
+    "異星生態調査団": {
+      "ko": "외계생태조사단",
+      "method": "previous_verified"
+    },
+    "異様な肩パッド": {
+      "ko": "머리보다 높은 어깨뽕",
+      "method": "previous_verified"
+    },
+    "癒し系地獄絵図": {
+      "ko": "힐링 지옥도",
+      "method": "previous_verified"
+    },
+    "白の神託": {
+      "ko": "백의 신탁",
+      "method": "previous_verified"
+    },
+    "百獣王Ⅰ 極ムズ": {
+      "ko": "백수의 왕 Ⅰ 극난도",
+      "method": "previous_verified"
+    },
+    "百獣王Ⅱ 超極ムズ": {
+      "ko": "백수의 왕 Ⅱ 초극난도",
+      "method": "previous_verified"
+    },
+    "百獣王Ⅲ 超極ムズ": {
+      "ko": "백수의 왕 Ⅲ 초극난도",
+      "method": "previous_verified"
+    },
+    "百獣王決戦 神ムズ": {
+      "ko": "백수의 왕 결전 신난도",
+      "method": "previous_verified"
+    },
+    "監獄草原": {
+      "ko": "감옥초원",
+      "method": "previous_verified"
+    },
+    "目撃！AI伝統漁": {
+      "ko": "전통 인공지능 낚시",
+      "method": "previous_verified"
+    },
+    "看守と墓守": {
+      "ko": "간수와 묘지기",
+      "method": "previous_verified"
+    },
+    "真っ黒クロック牢獄": {
+      "ko": "클락 페스티벌",
+      "method": "previous_verified"
+    },
+    "真人類創生": {
+      "ko": "신인류 탄생",
+      "method": "previous_verified"
+    },
+    "眠りたての愛": {
+      "ko": "잠들어버린 사랑",
+      "method": "previous_verified"
+    },
+    "眠りの洞穴": {
+      "ko": "영면의 동굴",
+      "method": "previous_verified"
+    },
+    "眠れる獅子": {
+      "ko": "잠자는 라이온",
+      "method": "previous_verified"
+    },
+    "眠眠交通警備隊": {
+      "ko": "교통 경찰의 호루라기",
+      "method": "previous_verified"
+    },
+    "知識に溺れる者の沼": {
+      "ko": "연구자의 늪",
+      "method": "previous_verified"
+    },
+    "短距離パレード": {
+      "ko": "10m 퍼레이드",
+      "method": "previous_verified"
+    },
+    "石の上に三分": {
+      "ko": "고진감내",
+      "method": "previous_verified"
+    },
+    "石油プラットフォーム": {
+      "ko": "석유 플랫폼",
+      "method": "previous_verified"
+    },
+    "砂礫を牛耳る不遇な者": {
+      "ko": "웃으면 복어 온다",
+      "method": "previous_verified"
+    },
+    "砂礫を牛耳る恵まれし者": {
+      "ko": "웃으면 복이 온다",
+      "method": "previous_verified"
+    },
+    "砂鉄海浜公園": {
+      "ko": "아이언 샌드 해변 공원",
+      "method": "previous_verified"
+    },
+    "砕けた仮面": {
+      "ko": "부서진 가면",
+      "method": "previous_verified"
+    },
+    "破られた誓い": {
+      "ko": "깨져버린 맹세",
+      "method": "previous_verified"
+    },
+    "磯のささやき": {
+      "ko": "바다의 속삭임",
+      "method": "previous_verified"
+    },
+    "神の面を賜りし者": {
+      "ko": "신의 가면을 하사받은 자",
+      "method": "previous_verified"
+    },
+    "禁断のスイーツは甘い": {
+      "ko": "금단의 달콤한 스위트",
+      "method": "previous_verified"
+    },
+    "私、独りぼっちじゃないもの": {
+      "ko": "난, 혼자가 아니니까",
+      "method": "previous_verified"
+    },
+    "秋の祭典 上位 極ムズ": {
+      "ko": "가을의 제전 상위 극난도",
+      "method": "previous_verified"
+    },
+    "秋の祭典 中位 極ムズ": {
+      "ko": "가을의 제전 중위 극난도",
+      "method": "previous_verified"
+    },
+    "秋の祭典 最上位 超極ムズ": {
+      "ko": "가을의 제전 최상위 초극난도",
+      "method": "previous_verified"
+    },
+    "秋の祭典 王位 超極ムズ": {
+      "ko": "가을의 제전 왕위 초극난도",
+      "method": "previous_verified"
+    },
+    "秘境ナタ・デ古道": {
+      "ko": "코코넛 젤리피쉬",
+      "method": "previous_verified"
+    },
+    "穴ぐらの最高権力者": {
+      "ko": "움막의 최대권력자",
+      "method": "previous_verified"
+    },
+    "究極兵器トド": {
+      "ko": "궁극의 병기 바다사자",
+      "method": "previous_verified"
+    },
+    "空中寝返り": {
+      "ko": "매일 밤 침대 한바퀴",
+      "method": "previous_verified"
+    },
+    "突然変異Lv.MAX": {
+      "ko": "돌연변이 Lv.MAX",
+      "method": "previous_verified"
+    },
+    "立ちっぱなしサウナ": {
+      "ko": "일어서서 사우나",
+      "method": "previous_verified"
+    },
+    "竪穴式校舎": {
+      "ko": "열두시 내고향",
+      "method": "previous_verified"
+    },
+    "竹とんぼ群生地": {
+      "ko": "윷가락 군락지",
+      "method": "previous_verified"
+    },
+    "笑えばいいと思うよ": {
+      "ko": "그냥 웃으면 돼",
+      "method": "previous_verified"
+    },
+    "第五番破綻調 超極ムズ": {
+      "ko": "제5번 악단조 초극난도",
+      "method": "previous_verified"
+    },
+    "箱詰め進化への道 超激ムズ": {
+      "ko": "한박스 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "粘り気シャワー": {
+      "ko": "끈기 샤워",
+      "method": "previous_verified"
+    },
+    "納豆海岸": {
+      "ko": "낫또 해안",
+      "method": "previous_verified"
+    },
+    "素性不明な一日船長": {
+      "ko": "정체불명의 임시선장",
+      "method": "previous_verified"
+    },
+    "終劇": {
+      "ko": "종극",
+      "method": "previous_verified"
+    },
+    "終末の谷": {
+      "ko": "종말의 계곡",
+      "method": "previous_verified"
+    },
+    "終焉のカタルシス": {
+      "ko": "종연의 카타르시스",
+      "method": "previous_verified"
+    },
+    "終焉の洞窟": {
+      "ko": "종언의 동굴",
+      "method": "previous_verified"
+    },
+    "終生の知的探求": {
+      "ko": "한평생 지적 탐구",
+      "method": "previous_verified"
+    },
+    "経験は小悪魔の誘惑": {
+      "ko": "경험은 소악마의 유혹",
+      "method": "previous_verified"
+    },
+    "経験は極上の味 超激ムズ": {
+      "ko": "경험은 개꿀맛 초고난도",
+      "method": "previous_verified"
+    },
+    "経験は至高の味 超極ムズ": {
+      "ko": "경험은 천국의 맛 초극난도",
+      "method": "previous_verified"
+    },
+    "経験は超極上の味 極ムズ": {
+      "ko": "경험은 초개꿀맛 극난도",
+      "method": "previous_verified"
+    },
+    "経験は魔性の誘惑": {
+      "ko": "경험은 마성의 유혹",
+      "method": "previous_verified"
+    },
+    "経験は魔王の誘惑": {
+      "ko": "경험은 마왕의 유혹",
+      "method": "previous_verified"
+    },
+    "絶対近視区域": {
+      "ko": "절대 근시 구역",
+      "method": "previous_verified"
+    },
+    "絶対防壁 超激ムズ": {
+      "ko": "절대방벽 초고난도",
+      "method": "previous_verified"
+    },
+    "絶撃のブラックホール 極ムズ": {
+      "ko": "절격의 블랙홀 극난도",
+      "method": "previous_verified"
+    },
+    "絶撃のワープホール 超極ムズ": {
+      "ko": "절격의 워프홀 초극난도",
+      "method": "previous_verified"
+    },
+    "絶撃の天渦 極ムズ": {
+      "ko": "절격의 천소용돌이 극난도",
+      "method": "previous_verified"
+    },
+    "絶撃の暴風渦 超極ムズ": {
+      "ko": "절격의 폭풍 소용돌이 초극난도",
+      "method": "previous_verified"
+    },
+    "絶撃の業渦 超極ムズ": {
+      "ko": "절격의 업과 초극난도",
+      "method": "previous_verified"
+    },
+    "絶撃の白渦 極ムズ": {
+      "ko": "절격의 하얀 소용돌이 극난도",
+      "method": "previous_verified"
+    },
+    "絶撃の赤渦 極ムズ": {
+      "ko": "절격의 붉은 소용돌이 극난도",
+      "method": "previous_verified"
+    },
+    "絶撃の鉄屑 極ムズ": {
+      "ko": "절격의 철 부스러기 극난도",
+      "method": "previous_verified"
+    },
+    "絶撃の魔渦 超極ムズ": {
+      "ko": "절격의 악마소용돌이 초극난도",
+      "method": "previous_verified"
+    },
+    "絶撃の黒渦 極ムズ": {
+      "ko": "절격의 검은 소용돌이 극난도",
+      "method": "previous_verified"
+    },
+    "絶滅の古渦 超極ムズ": {
+      "ko": "절멸의 오래된 소용돌이 초극난도",
+      "method": "previous_verified"
+    },
+    "網にかかりしオトシゴ": {
+      "ko": "그물에 걸린 해마",
+      "method": "previous_verified"
+    },
+    "練乳修洞窟の乙女": {
+      "ko": "동굴 속 아가씨",
+      "method": "previous_verified"
+    },
+    "繰り返される昼食": {
+      "ko": "오늘도 태워먹은 냄비",
+      "method": "previous_verified"
+    },
+    "置き去りバス停": {
+      "ko": "안경 쓰고 세수",
+      "method": "previous_verified"
+    },
+    "羅刹街道 超極ムズ": {
+      "ko": "악마의 도로 초극난도",
+      "method": "previous_verified"
+    },
+    "美しい終わり": {
+      "ko": "아름다운 종말",
+      "method": "previous_verified"
+    },
+    "聖★おねえさん 超極ムズ": {
+      "ko": "교회★언니 초극난도",
+      "method": "previous_verified"
+    },
+    "聖おねえさん 超極ムズ": {
+      "ko": "교회 언니 초극난도",
+      "method": "previous_verified"
+    },
+    "聖人ブラクラの遺骨": {
+      "ko": "직박구리의 유골",
+      "method": "previous_verified"
+    },
+    "肩乗りユンボ": {
+      "ko": "어깨가 좁은 깡패",
+      "method": "previous_verified"
+    },
+    "胸騒ぎ玄関": {
+      "ko": "불길한 현관",
+      "method": "previous_verified"
+    },
+    "脱出を阻む者": {
+      "ko": "탈출을 막는 자",
+      "method": "previous_verified"
+    },
+    "脱獄日誌": {
+      "ko": "탈옥일지",
+      "method": "previous_verified"
+    },
+    "自家製電気風呂": {
+      "ko": "핸드메이드 전기 욕조",
+      "method": "previous_verified"
+    },
+    "自由への上陸地": {
+      "ko": "자유를 찾아 상륙",
+      "method": "previous_verified"
+    },
+    "良いノリの祈り": {
+      "ko": "기도합시다",
+      "method": "previous_verified"
+    },
+    "花嫁進化への道 超激ムズ": {
+      "ko": "신부 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "英雄王の降臨 極ムズ": {
+      "ko": "영웅왕의 강림 극난도",
+      "method": "previous_verified"
+    },
+    "茶罪～ギル・ティ～": {
+      "ko": "죄와 벌",
+      "method": "previous_verified"
+    },
+    "荒らされた墓石": {
+      "ko": "엉망이 된 묘석",
+      "method": "previous_verified"
+    },
+    "落ちる果実の法則": {
+      "ko": "떨어지는 과일의 법칙",
+      "method": "previous_verified"
+    },
+    "落とされた欲と垢": {
+      "ko": "벗겨진 욕심과 때",
+      "method": "previous_verified"
+    },
+    "落とし穴地帯": {
+      "ko": "함정지대",
+      "method": "previous_verified"
+    },
+    "蔦に閉ざされた扉": {
+      "ko": "담쟁이 덩굴에 잠겨진 문",
+      "method": "previous_verified"
+    },
+    "薬品くさい牢屋": {
+      "ko": "약품냄새 감옥",
+      "method": "previous_verified"
+    },
+    "藻屑みはらし台": {
+      "ko": "별모래 천문대",
+      "method": "previous_verified"
+    },
+    "虎穴に入らずんば": {
+      "ko": "가가?",
+      "method": "previous_verified"
+    },
+    "虚栄の冠を賜りし者": {
+      "ko": "허영의 관을 받은 자",
+      "method": "previous_verified"
+    },
+    "虹の橋の通行料": {
+      "ko": "무지개 다리 통행료",
+      "method": "previous_verified"
+    },
+    "蝶！猪鹿鳥 極ムズ": {
+      "ko": "광박! 고도리! 극난도",
+      "method": "previous_verified"
+    },
+    "蟲毒が生む孤独": {
+      "ko": "독이 낳은 고독",
+      "method": "previous_verified"
+    },
+    "血の池沸騰": {
+      "ko": "뒤끓는 피의 연못",
+      "method": "previous_verified"
+    },
+    "裏切りの宴": {
+      "ko": "배신의 연회",
+      "method": "previous_verified"
+    },
+    "視界なき死海": {
+      "ko": "끝없는 사해",
+      "method": "previous_verified"
+    },
+    "解を求めて三千里": {
+      "ko": "정답찾아 삼천리",
+      "method": "previous_verified"
+    },
+    "解体ショー洞窟": {
+      "ko": "해체 쇼 동굴",
+      "method": "previous_verified"
+    },
+    "言葉の端のトゲ": {
+      "ko": "가시돋힌 말",
+      "method": "previous_verified"
+    },
+    "試練の谷底": {
+      "ko": "시련의 협곡",
+      "method": "previous_verified"
+    },
+    "誘惑のチキンルーム": {
+      "ko": "유혹의 치킨룸",
+      "method": "previous_verified"
+    },
+    "謎の汁湖": {
+      "ko": "매운 온천탕",
+      "method": "previous_verified"
+    },
+    "護謨要塞 極ムズ": {
+      "ko": "고무요새 극난도",
+      "method": "previous_verified"
+    },
+    "豚の残飯": {
+      "ko": "돼지 잔반",
+      "method": "previous_verified"
+    },
+    "豚小屋のタブー": {
+      "ko": "돼지우리의 금기",
+      "method": "previous_verified"
+    },
+    "豚箱恋愛沼": {
+      "ko": "유치장 러브",
+      "method": "previous_verified"
+    },
+    "豪族の集う喫煙所": {
+      "ko": "순종 시고르자브종",
+      "method": "previous_verified"
+    },
+    "貧弱エビデンス": {
+      "ko": "메컵 아티스트",
+      "method": "previous_verified"
+    },
+    "購買部を牛耳る鬼": {
+      "ko": "눈에선 피눈물",
+      "method": "previous_verified"
+    },
+    "贖罪バカンス": {
+      "ko": "반성의 바캉스",
+      "method": "previous_verified"
+    },
+    "赤いきつねの愚者": {
+      "ko": "빨간 여우의 어리석은 자",
+      "method": "previous_verified"
+    },
+    "赤いきつねの聖者": {
+      "ko": "적여우의 성자",
+      "method": "previous_verified"
+    },
+    "起源の覚醒": {
+      "ko": "기원의 각성",
+      "method": "previous_verified"
+    },
+    "跳躍する影の群れ": {
+      "ko": "도약하는 그림자 무리",
+      "method": "previous_verified"
+    },
+    "身の程知らずの巣": {
+      "ko": "주제를 모르는 새둥지",
+      "method": "previous_verified"
+    },
+    "転ばぬ先の杖": {
+      "ko": "유비무환",
+      "method": "previous_verified"
+    },
+    "転んだ先の毒沼": {
+      "ko": "유비유환",
+      "method": "previous_verified"
+    },
+    "転送型チャペル": {
+      "ko": "전송형 채플",
+      "method": "previous_verified"
+    },
+    "輝く道": {
+      "ko": "빛나는 길",
+      "method": "previous_verified"
+    },
+    "輪廻の業渦 超激ムズ": {
+      "ko": "윤회의 업과 초고난도",
+      "method": "previous_verified"
+    },
+    "輪廻を表す年輪": {
+      "ko": "윤회를 나타내는 연륜",
+      "method": "previous_verified"
+    },
+    "返却なき図書館": {
+      "ko": "무기한 도서 연체",
+      "method": "previous_verified"
+    },
+    "逆立ちサウナ": {
+      "ko": "단탄지 단짠지",
+      "method": "previous_verified"
+    },
+    "逆襲の大猿人": {
+      "ko": "역습의 거대 유인원",
+      "method": "previous_verified"
+    },
+    "通勤ラッシュ": {
+      "ko": "러쉬아워",
+      "method": "previous_verified"
+    },
+    "進撃のブラックホール 極ムズ": {
+      "ko": "진격의 블랙홀 극난도",
+      "method": "previous_verified"
+    },
+    "進撃のブラックホール 超激ムズ": {
+      "ko": "진격의 블랙홀 초고난도",
+      "method": "previous_verified"
+    },
+    "進撃のワープホール 極ムズ": {
+      "ko": "진격의 워프홀 극난도",
+      "method": "previous_verified"
+    },
+    "進撃のワープホール 超極ムズ": {
+      "ko": "진격의 워프홀 초극난도",
+      "method": "previous_verified"
+    },
+    "進撃の天渦 激ムズ": {
+      "ko": "진격의 천소용돌이 고난도",
+      "method": "previous_verified"
+    },
+    "進撃の天渦 超激ムズ": {
+      "ko": "진격의 천소용돌이 초고난도",
+      "method": "previous_verified"
+    },
+    "進撃の暴風渦 極ムズ": {
+      "ko": "진격의 폭풍 소용돌이 극난도",
+      "method": "previous_verified"
+    },
+    "進撃の暴風渦 超激ムズ": {
+      "ko": "진격의 폭풍 소용돌이 초고난도",
+      "method": "previous_verified"
+    },
+    "進撃の業渦 極ムズ": {
+      "ko": "진격의 업과 극난도",
+      "method": "previous_verified"
+    },
+    "進撃の白渦 激ムズ": {
+      "ko": "백소용돌이 고난도",
+      "method": "previous_verified"
+    },
+    "進撃の白渦 超激ムズ": {
+      "ko": "진격의 하얀 소용돌이 초고난도",
+      "method": "previous_verified"
+    },
+    "進撃の赤渦 激ムズ": {
+      "ko": "적소용돌이 고난도",
+      "method": "previous_verified"
+    },
+    "進撃の赤渦 超激ムズ": {
+      "ko": "진격의 붉은 소용돌이 초고난도",
+      "method": "previous_verified"
+    },
+    "進撃の鉄屑 極ムズ": {
+      "ko": "진격의 철 부스러기 극난도",
+      "method": "previous_verified"
+    },
+    "進撃の鉄屑 超激ムズ": {
+      "ko": "진격의 철 부스러기 초고난도",
+      "method": "previous_verified"
+    },
+    "進撃の魔渦 極ムズ": {
+      "ko": "악마소용돌이 극난도",
+      "method": "previous_verified"
+    },
+    "進撃の魔渦 超極ムズ": {
+      "ko": "진격의 악마소용돌이 초극난도",
+      "method": "previous_verified"
+    },
+    "進撃の黒渦 激ムズ": {
+      "ko": "흑소용돌이 고난도",
+      "method": "previous_verified"
+    },
+    "進撃の黒渦 超激ムズ": {
+      "ko": "진격의 검은 소용돌이 초고난도",
+      "method": "previous_verified"
+    },
+    "運動会進化への道 超激ムズ": {
+      "ko": "운동회 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "運命の夜 激ムズ": {
+      "ko": "운명의 밤 고난도",
+      "method": "previous_verified"
+    },
+    "過言の滝": {
+      "ko": "과언의 폭포",
+      "method": "previous_verified"
+    },
+    "遥かなる点P": {
+      "ko": "아득히 먼 점 P",
+      "method": "previous_verified"
+    },
+    "遥かなる赤土の荒野": {
+      "ko": "머나먼 붉은 황야",
+      "method": "previous_verified"
+    },
+    "適者生存処刑場": {
+      "ko": "적자생존 처형장",
+      "method": "previous_verified"
+    },
+    "遭難者の群れ": {
+      "ko": "조난자 무리",
+      "method": "previous_verified"
+    },
+    "遺伝子情報直売所": {
+      "ko": "유전자 정보 직판장",
+      "method": "previous_verified"
+    },
+    "避雷針ハット": {
+      "ko": "피뢰침 고깔모자",
+      "method": "previous_verified"
+    },
+    "邪悪な美魔女の城": {
+      "ko": "미녀 마녀",
+      "method": "previous_verified"
+    },
+    "邪神暴走 超極ムズ": {
+      "ko": "사신 폭주 초극난도",
+      "method": "previous_verified"
+    },
+    "邪神様のお告げ": {
+      "ko": "사신의 계시",
+      "method": "previous_verified"
+    },
+    "都炎上 超激ムズ": {
+      "ko": "도시 염상 초고난도",
+      "method": "previous_verified"
+    },
+    "酔いどれリビング": {
+      "ko": "주정뱅이 거실",
+      "method": "previous_verified"
+    },
+    "醤油さし魚群": {
+      "ko": "초장을 뒤집어쓴 고기 떼",
+      "method": "previous_verified"
+    },
+    "野ざらしホームステイ": {
+      "ko": "노숙 홈스테이",
+      "method": "previous_verified"
+    },
+    "野鳥観察": {
+      "ko": "야생조 관찰",
+      "method": "previous_verified"
+    },
+    "鈍足ドライブウェイ": {
+      "ko": "장롱면허 27년차",
+      "method": "previous_verified"
+    },
+    "銀色清流": {
+      "ko": "은빛 맑은 물",
+      "method": "previous_verified"
+    },
+    "鍾乳石イルミネーション": {
+      "ko": "종유석 일류미네이션",
+      "method": "previous_verified"
+    },
+    "鐘のマークを集めし者": {
+      "ko": "13번째 계단은",
+      "method": "previous_verified"
+    },
+    "長針と短針の密会": {
+      "ko": "시침과 초침의 밀회",
+      "method": "previous_verified"
+    },
+    "開眼カーニバル 極ムズ": {
+      "ko": "각성 카니발 극난도",
+      "method": "previous_verified"
+    },
+    "開眼カーニバル2 極ムズ": {
+      "ko": "각성 카니발2 극난도",
+      "method": "previous_verified"
+    },
+    "開眼カーニバル3 極ムズ": {
+      "ko": "각성 카니발3 극난도",
+      "method": "previous_verified"
+    },
+    "闇より生まれし宿敵": {
+      "ko": "지옥의 숙적",
+      "method": "previous_verified"
+    },
+    "防波堤の血戦": {
+      "ko": "방파제의 혈전",
+      "method": "previous_verified"
+    },
+    "阿・修羅の道 極ムズ": {
+      "ko": "계속되는 아수라의 길 극난도",
+      "method": "previous_verified"
+    },
+    "降り注ぐねりあめ": {
+      "ko": "별사탕 내리는 사막",
+      "method": "previous_verified"
+    },
+    "陸と空 Lv.MAX": {
+      "ko": "육군 & 공군 Lv.MAX",
+      "method": "previous_verified"
+    },
+    "陽子と中性子と悦子": {
+      "ko": "양자, 중성자 그리고 숙자",
+      "method": "previous_verified"
+    },
+    "隊列乱すパイレーツ": {
+      "ko": "휘적거리는 해적",
+      "method": "previous_verified"
+    },
+    "隙間風のささやき": {
+      "ko": "바람의 속삭임",
+      "method": "previous_verified"
+    },
+    "隣り合う冥土": {
+      "ko": "저세상 문턱",
+      "method": "previous_verified"
+    },
+    "雑草庭園": {
+      "ko": "잡초 가든",
+      "method": "previous_verified"
+    },
+    "雨漏り洞窟": {
+      "ko": "침수 동굴",
+      "method": "previous_verified"
+    },
+    "雪にともす灯": {
+      "ko": "눈에 켜진 빛",
+      "method": "previous_verified"
+    },
+    "霊峰ニクマンジャロ": {
+      "ko": "킬리만자로의 냥코",
+      "method": "previous_verified"
+    },
+    "霞む視界の先には": {
+      "ko": "흐릿한 시야 저편",
+      "method": "previous_verified"
+    },
+    "霧散した記憶の泉": {
+      "ko": "흐린 기억 속의 연못",
+      "method": "previous_verified"
+    },
+    "青き鳥の幻影": {
+      "ko": "파랑새의 환영",
+      "method": "previous_verified"
+    },
+    "静かなる草原の虚像": {
+      "ko": "고요한 초원의 허상",
+      "method": "previous_verified"
+    },
+    "音速火砕流": {
+      "ko": "분화구 용암 분수",
+      "method": "previous_verified"
+    },
+    "頂の大賢者": {
+      "ko": "정상에 사는 현자",
+      "method": "previous_verified"
+    },
+    "顔窟王": {
+      "ko": "꽃미남 동굴",
+      "method": "previous_verified"
+    },
+    "風そよぐ黄昏時": {
+      "ko": "바람에 살랑이는 황혼",
+      "method": "previous_verified"
+    },
+    "食べごろナノぶどう": {
+      "ko": "제철 나노 포도",
+      "method": "previous_verified"
+    },
+    "食べられるシャツ": {
+      "ko": "무릎 밑 새깅",
+      "method": "previous_verified"
+    },
+    "館長の自画像": {
+      "ko": "관장의 자화상",
+      "method": "previous_verified"
+    },
+    "骨身にしみる水": {
+      "ko": "뼈에 사무치는 물",
+      "method": "previous_verified"
+    },
+    "高密度おにぎり山脈": {
+      "ko": "돌고 도는 물회방아",
+      "method": "previous_verified"
+    },
+    "鬼である進化への道 超激ムズ": {
+      "ko": "내가 도깨비라오 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "鬼ヶ島ＤＸ 極ムズ": {
+      "ko": "아일랜드DX 극난도",
+      "method": "previous_verified"
+    },
+    "魔犬の遠吠え": {
+      "ko": "파렴치안",
+      "method": "previous_verified"
+    },
+    "魔王の寝室": {
+      "ko": "마왕의 침실",
+      "method": "previous_verified"
+    },
+    "魔王憑依 超極ムズ": {
+      "ko": "마왕빙의 초극난도",
+      "method": "previous_verified"
+    },
+    "魚介類と血のにおい": {
+      "ko": "어패류와 피의냄새",
+      "method": "previous_verified"
+    },
+    "魚足魅惑のマーメイド": {
+      "ko": "미식가 머메이드",
+      "method": "previous_verified"
+    },
+    "鮮血神殿の発動 激ムズ": {
+      "ko": "선혈신전의 발동 고난도",
+      "method": "previous_verified"
+    },
+    "黒い予感": {
+      "ko": "검은 예감",
+      "method": "previous_verified"
+    },
+    "１３番ホールの住人": {
+      "ko": "골프장 붙박이",
+      "method": "previous_verified"
+    },
+    "３つの運命": {
+      "ko": "3개의 운명",
+      "method": "previous_verified"
+    },
+    "８K肥溜め": {
+      "ko": "8K 거름밭",
+      "method": "previous_verified"
+    },
+    "ＤＮＡとＤＨＡ": {
+      "ko": "DNA와 DHA",
+      "method": "previous_verified"
+    }
   },
   "untranslated": [
     "+Lv45解放への道",
