@@ -1,11 +1,12 @@
 {
   "source": "battlecats.anypupil.com Korean bilingual stage pages + kr-stage-names.txt + previous verified stage-ko.json",
-  "generated_by": "scripts/update_stage_ko.py v4",
+  "generated_by": "scripts/update_stage_ko.py v5-conservative-inference",
   "sheet_id": "12bhVk1tfC9N-U2eU9xie-XoW2gw85acQAukR-W2k3KY",
   "sheet_stage_count": 1294,
-  "sheet_translated_count": 1052,
-  "untranslated_count": 242,
-  "count": 1052,
+  "sheet_translated_count": 1054,
+  "untranslated_count": 240,
+  "inferred_count": 2,
+  "count": 1054,
   "stages": {
     "13日の給料日": "13일의 월급날",
     "22時22分の観測者": "22시 22분의 관측자",
@@ -215,6 +216,7 @@
     "カレー彗星": "카레 혜성",
     "カンフーG進化への道 超激ムズ": "쿵후 냥코G 진화로의 길 초고난도",
     "カンフー進化への道 超激ムズ": "쿵후 진화로의 길 초고난도",
+    "カート進化への道 超激ムズ": "스커트 진화로의 길 초고난도",
     "ガイアの夜明け": "가이아의 새벽",
     "ガスパチョ高原": "가스파초 고원",
     "ガス吸う鳥": "강제 가스 흡입",
@@ -931,6 +933,7 @@
     "良いノリの祈り": "기도합시다",
     "花嫁進化への道 超激ムズ": "신부 진화로의 길 초고난도",
     "英雄王の降臨 極ムズ": "영웅왕의 강림 극난도",
+    "英雄王の降臨 超極ムズ": "영웅왕의 강림 극난도",
     "茶罪～ギル・ティ～": "죄와 벌",
     "荒らされた墓石": "엉망이 된 묘석",
     "落ちる果実の法則": "떨어지는 과일의 법칙",
@@ -5268,6 +5271,20 @@
     "ＤＮＡとＤＨＡ": {
       "ko": "DNA와 DHA",
       "method": "previous_verified"
+    },
+    "カート進化への道 超激ムズ": {
+      "ko": "스커트 진화로의 길 초고난도",
+      "method": "inferred_near_exact",
+      "basis": "スカート進化への道 超激ムズ",
+      "similarity": 0.96,
+      "confidence": "high"
+    },
+    "英雄王の降臨 超極ムズ": {
+      "ko": "영웅왕의 강림 극난도",
+      "method": "inferred_near_exact",
+      "basis": "英雄王の降臨 極ムズ",
+      "similarity": 0.9474,
+      "confidence": "high"
     }
   },
   "untranslated": [
@@ -5349,7 +5366,6 @@
     "エキスパート 準々決勝",
     "エキスパート 準決勝",
     "エッグ Lv.20",
-    "カート進化への道 超激ムズ",
     "テレホー台座",
     "ネコ補完計画 極ムズ",
     "ビッグバン",
@@ -5475,7 +5491,6 @@
     "老神 Lv.10",
     "聖杯戦争 最終日",
     "舞台装置の魔女 XX週目",
-    "英雄王の降臨 超極ムズ",
     "蒼獣石の砂漠Ⅲ",
     "蒼獣石の砂漠Ⅳ",
     "警戒 Lv.10",
