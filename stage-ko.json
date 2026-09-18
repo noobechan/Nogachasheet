@@ -5,7 +5,7 @@
   "sheet_stage_count": 1294,
   "sheet_translated_count": 1054,
   "untranslated_count": 240,
-  "inferred_count": 2,
+  "inferred_count": 0,
   "count": 1054,
   "stages": {
     "13日の給料日": "13일의 월급날",
@@ -1894,6 +1894,10 @@
     },
     "カンフー進化への道 超激ムズ": {
       "ko": "쿵후 진화로의 길 초고난도",
+      "method": "previous_verified"
+    },
+    "カート進化への道 超激ムズ": {
+      "ko": "스커트 진화로의 길 초고난도",
       "method": "previous_verified"
     },
     "ガイアの夜明け": {
@@ -4760,6 +4764,10 @@
       "ko": "영웅왕의 강림 극난도",
       "method": "previous_verified"
     },
+    "英雄王の降臨 超極ムズ": {
+      "ko": "영웅왕의 강림 극난도",
+      "method": "previous_verified"
+    },
     "茶罪～ギル・ティ～": {
       "ko": "죄와 벌",
       "method": "previous_verified"
@@ -5271,20 +5279,6 @@
     "ＤＮＡとＤＨＡ": {
       "ko": "DNA와 DHA",
       "method": "previous_verified"
-    },
-    "カート進化への道 超激ムズ": {
-      "ko": "스커트 진화로의 길 초고난도",
-      "method": "inferred_near_exact",
-      "basis": "スカート進化への道 超激ムズ",
-      "similarity": 0.96,
-      "confidence": "high"
-    },
-    "英雄王の降臨 超極ムズ": {
-      "ko": "영웅왕의 강림 극난도",
-      "method": "inferred_near_exact",
-      "basis": "英雄王の降臨 極ムズ",
-      "similarity": 0.9474,
-      "confidence": "high"
     }
   },
   "untranslated": [
