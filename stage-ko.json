@@ -2,11 +2,11 @@
   "source": "battlecats.anypupil.com Korean bilingual stage pages + kr-stage-names.txt + previous verified stage-ko.json",
   "generated_by": "scripts/update_stage_ko.py v5-conservative-inference",
   "sheet_id": "12bhVk1tfC9N-U2eU9xie-XoW2gw85acQAukR-W2k3KY",
-  "sheet_stage_count": 1295,
-  "sheet_translated_count": 1054,
+  "sheet_stage_count": 1296,
+  "sheet_translated_count": 1055,
   "untranslated_count": 241,
-  "inferred_count": 0,
-  "count": 1054,
+  "inferred_count": 1,
+  "count": 1055,
   "stages": {
     "13日の給料日": "13일의 월급날",
     "22時22分の観測者": "22시 22분의 관측자",
@@ -648,6 +648,7 @@
     "弱肉朝食": "약육조식",
     "彩りトリミング": "스트리트리밍",
     "影に落ちた騎士王 極ムズ": "그림자에 떨어진 기사왕 극난도",
+    "影に落ちた騎士王 超極ムズ": "그림자에 떨어진 기사왕 극난도",
     "復活の偽呪文": "부활의 거짓 주문",
     "復讐の準備": "복수의 준비",
     "心の師匠 Lv.MAX": "마음의 스승 Lv.MAX",
@@ -5279,6 +5280,13 @@
     "ＤＮＡとＤＨＡ": {
       "ko": "DNA와 DHA",
       "method": "previous_verified"
+    },
+    "影に落ちた騎士王 超極ムズ": {
+      "ko": "그림자에 떨어진 기사왕 극난도",
+      "method": "inferred_near_exact",
+      "basis": "影に落ちた騎士王 極ムズ",
+      "similarity": 0.9565,
+      "confidence": "high"
     }
   },
   "untranslated": [
