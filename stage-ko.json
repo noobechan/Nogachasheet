@@ -5,7 +5,7 @@
   "sheet_stage_count": 1296,
   "sheet_translated_count": 1055,
   "untranslated_count": 241,
-  "inferred_count": 1,
+  "inferred_count": 0,
   "count": 1055,
   "stages": {
     "13日の給料日": "13일의 월급날",
@@ -3625,6 +3625,10 @@
       "ko": "그림자에 떨어진 기사왕 극난도",
       "method": "previous_verified"
     },
+    "影に落ちた騎士王 超極ムズ": {
+      "ko": "그림자에 떨어진 기사왕 극난도",
+      "method": "previous_verified"
+    },
     "復活の偽呪文": {
       "ko": "부활의 거짓 주문",
       "method": "previous_verified"
@@ -5280,13 +5284,6 @@
     "ＤＮＡとＤＨＡ": {
       "ko": "DNA와 DHA",
       "method": "previous_verified"
-    },
-    "影に落ちた騎士王 超極ムズ": {
-      "ko": "그림자에 떨어진 기사왕 극난도",
-      "method": "inferred_near_exact",
-      "basis": "影に落ちた騎士王 極ムズ",
-      "similarity": 0.9565,
-      "confidence": "high"
     }
   },
   "untranslated": [
