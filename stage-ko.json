@@ -32388,25 +32388,25 @@
       "method": "anypupil_ko_bilingual",
       "sid": "bb8hu"
     },
-    "+Lv60解放への道": {
-      "ko": "+Lv.60 해방의 길",
-      "method": "normalized_exact"
-    },
-    "猫縛り進化への道 超激ムズ": {
-      "ko": "고양이 밧줄 진화로의 길 초고난도",
-      "method": "normalized_exact"
-    },
-    "+Lv55解放への道": {
-      "ko": "+Lv.55 해방의 길",
-      "method": "normalized_exact"
+    "+Lv45解放への道": {
+      "ko": "+Lv.45 해방의 길",
+      "method": "previous_verified"
     },
     "+Lv50解放への道": {
       "ko": "+Lv.50 해방의 길",
-      "method": "normalized_exact"
+      "method": "previous_verified"
     },
-    "+Lv45解放への道": {
-      "ko": "+Lv.45 해방의 길",
-      "method": "normalized_exact"
+    "+Lv55解放への道": {
+      "ko": "+Lv.55 해방의 길",
+      "method": "previous_verified"
+    },
+    "+Lv60解放への道": {
+      "ko": "+Lv.60 해방의 길",
+      "method": "previous_verified"
+    },
+    "猫縛り進化への道 超激ムズ": {
+      "ko": "고양이 밧줄 진화로의 길 초고난도",
+      "method": "previous_verified"
     }
   },
   "untranslated": [
